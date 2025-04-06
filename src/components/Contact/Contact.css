@@ -77,7 +77,7 @@
 }
 
 .form-input {
-    width: 100%;
+    width: calc(100% - 1rem);
     padding: 0.5rem;
     background-color: #1f2937;
     border: 1px solid #4b5563;
@@ -97,11 +97,12 @@
 @media (min-width: 768px) {
     .send-button {
         display: inline-block;
-        background: linear-gradient(to right, var(--primary-button-bg), #3b82f6);
-        color: white;
+        margin-left: auto;
+        width: 100px;
+        background: var(--primary-button-bg);
+        color: var(--primary-button-color);
         padding: 0.5rem 2rem;
-        border-radius: 9999px;
-        transition: transform 0.3s ease;
+        border-radius: var(--primary-button-radius);
     }
 
     .send-button:hover {

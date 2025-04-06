@@ -14,18 +14,6 @@ const Footer = () => {
                             software development.
                         </p>
                     </div>
-                    <div className="footer-form">
-                        <form className="form">
-                            <input
-                                type="email"
-                                placeholder="Your email"
-                                className="email-input"
-                            />
-                            <button type="submit" className="subscribe-button">
-                                Subscribe
-                            </button>
-                        </form>
-                    </div>
                 </div>
 
                 <div className="footer-bottom">
@@ -33,16 +21,13 @@ const Footer = () => {
                         &copy; {new Date().getFullYear()} Christos. All rights reserved.
                     </p>
                     <div className="footer-social">
-                        <a href="#" className="footer-social-link">
+                        <a href="https://www.facebook.com/chris.tsopelas.7" target="_blank" className="footer-social-link">
                             <FaFacebook />
                         </a>
-                        <a href="#" className="footer-social-link">
-                            <FaTwitter />
-                        </a>
-                        <a href="#" className="footer-social-link">
+                        <a href="https://www.linkedin.com/in/christos-tsopelas-77218911b/" target="_blank" className="footer-social-link">
                             <FaLinkedin />
                         </a>
-                        <a href="#" className="footer-social-link">
+                        <a href="https://github.com/christsop" target="_blank" className="footer-social-link">
                             <FaGithub />
                         </a>
                     </div>
