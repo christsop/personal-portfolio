@@ -13,17 +13,17 @@ const Contact = () => {
     const handleFormSubmission = () => {
         form.current.reset();
         setIsFormSubmitted(true);
-        setTimeout(() => setIsFormSubmitted(false), 3000);
+        setTimeout(() => setIsFormSubmitted(false), 5000);
     }
 
     const sendEmail = (e) => {
         e.preventDefault();
 
         emailjs.sendForm(
-            'service_7acmyl3',     // replace with your EmailJS service ID
-            'template_dguxv4c',    // replace with your EmailJS template ID
+            process.env.EMAILJS_SERVICE_ID,
+            process.env.EMAILJS_TEMPLATE_ID,
             form.current,
-            'hduheliiOgH_5Xs_4' // replace with your public key
+            process.env.EMAILJS_USER_ID
         )
             .then((result) => {
                 console.log(result.text);
