@@ -1,5 +1,5 @@
 .contact-section {
-    background-color: black;
+    background-color: var(--background-color);
     color: white;
     padding: 5rem 0;
 }
@@ -36,7 +36,7 @@
 .contact-subheading {
     font-size: 1.875rem;
     font-weight: bold;
-    background: linear-gradient(to right, #34d399, #3b82f6);
+    background: linear-gradient(to right, var(--primary-button-bg), #3b82f6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
@@ -47,9 +47,8 @@
 }
 
 .contact-icon {
-    color: #34d399;
+    color: var(--primary-button-bg);
     margin-right: 0.5rem;
-    vertical-align: middle;
 }
 
 .contact-link {
@@ -88,7 +87,7 @@
 
 .form-input:focus {
     outline: none;
-    border-color: #34d399;
+    border-color: var(--primary-button-bg);
 }
 
 .send-button {
@@ -98,7 +97,7 @@
 @media (min-width: 768px) {
     .send-button {
         display: inline-block;
-        background: linear-gradient(to right, #34d399, #3b82f6);
+        background: linear-gradient(to right, var(--primary-button-bg), #3b82f6);
         color: white;
         padding: 0.5rem 2rem;
         border-radius: 9999px;

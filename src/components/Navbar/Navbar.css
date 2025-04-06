@@ -1,5 +1,5 @@
 .navbar {
-    background-color: black;
+    background-color: var(--background-color);
     color: white;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -82,7 +82,7 @@
     }
 
     .connect-button:hover {
-        transform: scale(1.05);
-        color: var(--primary-button-bgHover);
+        background: var(--primary-button-bgHover);
+        color: var(--primary-button-color);
     }
 }

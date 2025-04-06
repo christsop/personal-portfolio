@@ -3,7 +3,7 @@ import { FaEnvelope, FaMapMarkedAlt, FaPhone } from 'react-icons/fa'
 import './Contact.css'
 
 const EMAIL = 'tsopelasat@gmail.com';
-const PHONE = '+306934831454';
+const PHONE = '306934831454';
 
 const Contact = () => {
     return (

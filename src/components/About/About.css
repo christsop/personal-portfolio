@@ -1,5 +1,5 @@
 .about-section {
-    background-color: black;
+    background-color: var(--background-color);
     color: white;
     padding: 5rem 1rem;
 }

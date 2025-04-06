@@ -1,6 +1,7 @@
 import React from 'react'
 import HeroImage from '../../assets/hero-image.png'
 import './Hero.css'
+import { HiDownload } from "react-icons/hi";
 
 const Hero = () => {
     return (
@@ -13,8 +14,8 @@ const Hero = () => {
                 I specialize in building modern and responsive web applications.
             </p>
             <div className="hero-buttons">
-                <button className="hero-button">Contact With Me</button>
-                <button className="hero-button">Resume</button>
+                <a href="#contact" className="hero-button">Contact With Me</a>
+                <a className="hero-button-secondary">Resume <div><HiDownload className="download-icon" /></div></a>
             </div>
         </div>
     )

@@ -1,6 +1,6 @@
 /* Global styles for the footer */
 .footer {
-    background-color: black;
+    background-color: var(--background-color);
     color: white;
     padding-top: 2rem;
     padding-bottom: 2rem;

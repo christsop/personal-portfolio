@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: var(--background-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -34,7 +34,7 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
+  border-radius: var(--primary-button-radius);
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -67,7 +67,19 @@ button:focus-visible {
 
 :root {
   --primary-button-bg: #02dbc7;
-  --primary-button-color: black;
-  --primary-button-bgHover: #007bff;
-  --primary-button-colorHover: black;
+  --primary-button-color: #1d1e2c;
+  --primary-button-bgHover: #07bfb7;
+  --primary-button-colorHover: #1d1e2c;
+  --primary-button-radius: 4px;
+
+  --secondary-button-bg: #1d1e2c;
+  --secondary-button-color: #07bfb7;
+  --secondary-button-bgHover: #2e2f42;
+  --secondary-button-colorHover: #07bfb7;
+  --secondary-button-radius: 4px;
+  --secondary-button-border-color: #07bfb7;
+
+  --background-color: #1d1e2c;
+  --background-color-secondary: #2e2e48;
+
 }

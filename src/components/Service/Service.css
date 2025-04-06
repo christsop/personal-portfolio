@@ -1,5 +1,5 @@
 .services-section {
-    background-color: black;
+    background-color: var(--background-color);
     color: white;
     padding: 5rem 0;
 }
@@ -36,7 +36,7 @@
 }
 
 .service-card {
-    background-color: #1f2937;
+    background-color: var(--background-color-secondary);
     padding: 1.5rem;
     padding-bottom: 1.5rem;
     border-radius: 0.5rem;
