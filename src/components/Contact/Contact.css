@@ -99,3 +99,11 @@
     padding: 0.5rem 2rem;
     border-radius: var(--primary-button-radius);
 }
+
+.contact-form-actions {
+    display: flex;
+}
+
+.thank-you {
+    color: var(--primary-button-bg);
+}

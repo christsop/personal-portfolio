@@ -1,11 +1,38 @@
-import React from 'react'
-import { FaEnvelope, FaMapMarkedAlt, FaPhone } from 'react-icons/fa'
-import './Contact.css'
+import React, {useRef, useState} from 'react';
+import emailjs from 'emailjs-com';
+import { FaEnvelope, FaMapMarkedAlt, FaPhone } from 'react-icons/fa';
+import './Contact.css';
 
 const EMAIL = 'tsopelasat@gmail.com';
 const PHONE = '306934831454';
 
 const Contact = () => {
+    const form = useRef();
+    const [isFormSubmitted, setIsFormSubmitted] = useState(false)
+
+    const handleFormSubmission = () => {
+        form.current.reset();
+        setIsFormSubmitted(true);
+        setTimeout(() => setIsFormSubmitted(false), 3000);
+    }
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            'service_7acmyl3',     // replace with your EmailJS service ID
+            'template_dguxv4c',    // replace with your EmailJS template ID
+            form.current,
+            'hduheliiOgH_5Xs_4' // replace with your public key
+        )
+            .then((result) => {
+                console.log(result.text);
+                handleFormSubmission();
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
+
     return (
         <div className="contact-section" id="contact">
             <div className="contact-container">
@@ -29,26 +56,29 @@ const Contact = () => {
                     </div>
 
                     <div className="contact-form-wrapper">
-                        <form className="contact-form">
+                        <form ref={form} onSubmit={sendEmail} className="contact-form">
                             <div>
                                 <label htmlFor="name" className="form-label">Your Name</label>
-                                <input type="text" className="form-input" placeholder="Enter You Name" />
+                                <input type="text" name="name" className="form-input" placeholder="Enter Your Name" required />
                             </div>
                             <div>
                                 <label htmlFor="email" className="form-label">Email</label>
-                                <input type="text" className="form-input" placeholder="Enter You Email" />
+                                <input type="email" name="email" className="form-input" placeholder="Enter Your Email" required />
                             </div>
                             <div>
                                 <label htmlFor="message" className="form-label">Message</label>
-                                <textarea rows="5" className="form-input" placeholder="Enter You Message"></textarea>
+                                <textarea name="message" rows="5" className="form-input" placeholder="Enter Your Message" required></textarea>
                             </div>
-                            <button className="send-button">Send</button>
+                            <div className="contact-form-actions">
+                                {isFormSubmitted && <div className="thank-you">Thank you for reaching out</div>}
+                                <button type="submit" className="send-button">Send</button>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Contact
+export default Contact;
