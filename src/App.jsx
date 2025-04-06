@@ -4,6 +4,7 @@ import Hero from "./components/Hero/Hero.jsx";
 import Service from "./components/Service/Service.jsx";
 import About from "./components/About/About.jsx";
 import Projects from "./components/Projects/Projects.jsx";
+import Contact from "./components/Contact/Contact.jsx";
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Service />
       <About />
       <Projects />
+      <Contact />
     </>
   )
 }
