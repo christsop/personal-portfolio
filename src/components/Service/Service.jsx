@@ -4,23 +4,18 @@ import './Service.css'
 const services = [
     {
         id: 1,
-        title: "Web Design",
-        description: "Creating visually appealing and user-friendly web designs.",
-    },
-    {
-        id: 2,
         title: "Frontend Development",
         description: "Building responsive and interactive user interfaces.",
     },
     {
-        id: 3,
+        id: 2,
         title: "Backend Development",
-        description: "Developing robust server-side logic and databases.",
+        description: "Creating basic server-side applications using Node.js and Express.",
     },
     {
-        id: 4,
-        title: "Full-Stack Development",
-        description: "Combining both frontend and backend development skills.",
+        id: 3,
+        title: "API Design & Integration",
+        description: "Designing RESTful APIs and connecting frontends to backend services. Integration also with SQL and NO-SQL database.",
     }
 ];
 const Service = () => {
@@ -31,7 +26,6 @@ const Service = () => {
                 <div className="services-grid">
                     {services.map((service) => (
                         <div key={service.id} className="service-card">
-                            <div className="service-id">{service.id}</div>
                             <h3 className="service-title">{service.title}</h3>
                             <p className="service-description">{service.description}</p>
                             <a href="#" className="service-link">Read More</a>
