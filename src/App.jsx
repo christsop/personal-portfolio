@@ -5,6 +5,7 @@ import Service from "./components/Service/Service.jsx";
 import About from "./components/About/About.jsx";
 import Projects from "./components/Projects/Projects.jsx";
 import Contact from "./components/Contact/Contact.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <About />
       <Projects />
       <Contact />
+      <Footer />
     </>
   )
 }
