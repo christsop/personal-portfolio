@@ -91,21 +91,11 @@
 }
 
 .send-button {
-    display: none;
-}
-
-@media (min-width: 768px) {
-    .send-button {
-        display: inline-block;
-        margin-left: auto;
-        width: 100px;
-        background: var(--primary-button-bg);
-        color: var(--primary-button-color);
-        padding: 0.5rem 2rem;
-        border-radius: var(--primary-button-radius);
-    }
-
-    .send-button:hover {
-        transform: scale(1.05);
-    }
+    display: inline-block;
+    margin-left: auto;
+    width: 100px;
+    background: var(--primary-button-bg);
+    color: var(--primary-button-color);
+    padding: 0.5rem 2rem;
+    border-radius: var(--primary-button-radius);
 }

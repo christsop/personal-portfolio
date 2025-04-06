@@ -31,7 +31,7 @@ const Hero = () => {
             </p>
             <div className="hero-buttons">
                 <a href="#contact" className="hero-button">Contact With Me</a>
-                <a className="hero-button-secondary">Resume <div><HiDownload className="download-icon" /></div></a>
+                <a className="hero-button-secondary" href="/resume.pdf" download>Resume <div><HiDownload className="download-icon" /></div></a>
             </div>
         </div>
     )
