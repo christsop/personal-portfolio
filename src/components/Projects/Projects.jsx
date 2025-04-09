@@ -42,14 +42,6 @@ const Projects = () => {
                             />
                             <h3 className="project-title">{project.name}</h3>
                             <p className="project-tech">{project.technologies}</p>
-                            <a
-                                href={project.github}
-                                className="project-link"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                GitHub
-                            </a>
                         </div>
                     ))}
                 </div>

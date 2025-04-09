@@ -82,7 +82,6 @@
     transition: transform 0.3s ease;
 }
 
-
 .hero-button:hover {
     background: var(--primary-button-bgHover);
     color: var(--primary-button-colorHover);
