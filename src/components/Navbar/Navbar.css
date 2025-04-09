@@ -68,7 +68,6 @@
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-    margin-left: auto;
 }
 
 .hamburger .bar {
@@ -134,7 +133,29 @@
             background: white;
         }
     }
+
+
 }
+
+.mobile-only {
+    display: block;
+}
+
+.desktop-only {
+    display: none;
+}
+
+/* For screens wider or equal to 768px, switch visibility */
+@media (min-width: 768px) {
+    .mobile-only {
+        display: none; /* Hide mobile-only elements */
+    }
+
+    .desktop-only {
+        display: block; /* Show desktop-only elements */
+    }
+}
+
 
 /* Dark Mode Switch for Mobile */
 .navbar-links .react-toggle-dark-mode {

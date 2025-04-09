@@ -54,6 +54,14 @@ const Navbar = () => {
             <div className="navbar-container">
                 <div className="navbar-brand">Christos</div>
 
+                <DarkModeSwitch
+                    style={{ marginLeft: "calc(50% - 30px)" }}
+                    className="mobile-only"
+                    checked={isDarkTheme}
+                    onChange={() => setIsDarkTheme(!isDarkTheme)}
+                    size={30}
+                />
+
                 {/* Hamburger Menu for Small Screens */}
                 <div
                     className={`hamburger ${isMenuOpen ? "open" : ""}`}
@@ -78,6 +86,7 @@ const Navbar = () => {
                     ))}
                     <DarkModeSwitch
                         style={{ marginLeft: "15px" }}
+                        className="desktop-only"
                         checked={isDarkTheme}
                         onChange={() => setIsDarkTheme(!isDarkTheme)}
                         size={30}
