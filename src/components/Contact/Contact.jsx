@@ -72,7 +72,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <label htmlFor="message" className="form-label">Message</label>
-                                <textarea onKeyUp={(e)=>adjustHeight(e.target)} name="message" rows="5" className="form-input message" placeholder="Enter Your Message" required></textarea>
+                                <textarea onPaste={(e)=>adjustHeight(e.target)} onKeyUp={(e)=>adjustHeight(e.target)} name="message" rows="5" className="form-input message" placeholder="Enter Your Message" required></textarea>
                             </div>
                             <div className="contact-form-actions">
                                 {isFormSubmitted && <div className="thank-you">Thank you for reaching out</div>}
