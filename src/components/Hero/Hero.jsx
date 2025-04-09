@@ -31,8 +31,10 @@ const Hero = () => {
         <div className="hero">
             <img src={HeroImage} alt="Profile" className="hero-image" />
             <h1 className="hero-title">
-                I'm <span className="hero-highlight">Christos Tsopelas, </span>
-                <span className="typewriter-text">{displayedText}<span className="cursor">|</span></span>
+                <div>
+                    I'm <span className="hero-highlight">Christos Tsopelas, </span>
+                </div>
+                <span className={`${displayedText ? '' : 'height-49'} typewriter-text`}>{displayedText}<span className="cursor">|</span></span>
             </h1>
             <p className="hero-subtitle">
                 I specialize in building modern and responsive web applications.
