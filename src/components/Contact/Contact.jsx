@@ -33,6 +33,11 @@ const Contact = () => {
             });
     };
 
+    function adjustHeight(element) {
+        element.style.height = "1px";
+        element.style.height = (25+element.scrollHeight)+"px";
+    }
+
     return (
         <div className="contact-section" id="contact">
             <div className="contact-container">
@@ -67,7 +72,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <label htmlFor="message" className="form-label">Message</label>
-                                <textarea name="message" rows="5" className="form-input" placeholder="Enter Your Message" required></textarea>
+                                <textarea onKeyUp={(e)=>adjustHeight(e.target)} name="message" rows="5" className="form-input message" placeholder="Enter Your Message" required></textarea>
                             </div>
                             <div className="contact-form-actions">
                                 {isFormSubmitted && <div className="thank-you">Thank you for reaching out</div>}

@@ -107,3 +107,7 @@
 .thank-you {
     color: var(--primary-button-bg);
 }
+
+.message {
+    resize: none;
+}
