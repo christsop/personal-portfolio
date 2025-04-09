@@ -139,10 +139,10 @@ button:focus-visible {
 
 .light-theme {
   /* --- Primary Button Styles --- */
-  --primary-button-bg: #02dbc7; /* Light button background */
-  --primary-button-color: #1a1a1a; /* Light button text color */
-  --primary-button-bgHover: #02dbc7; /* Light button hover background */
-  --primary-button-colorHover: #121212; /* Light button hover text color */
+  --primary-button-bg: #5440d9; /* Light button background */
+  --primary-button-color: white; /* Light button text color */
+  --primary-button-bgHover: #5440d9; /* Light button hover background */
+  --primary-button-colorHover: white; /* Light button hover text color */
   --primary-button-radius: 4px; /* No change, keep the same */
 
   /* --- Secondary Button Styles --- */
@@ -167,7 +167,7 @@ button:focus-visible {
   /* --- Gradient Colors --- */
   --gradient-service-id: linear-gradient(to right, #16a34a, #60a5fa); /* Keep the same */
   --service-description-color: #495464; /* Slightly darker muted gray */
-  --service-link-color: #213547; /* Dark link color in light theme */
+  --service-link-color: #5440d9; /* Dark link color in light theme */
   --service-link-hover-bg: #d1e7dd; /* Light hover color for links */
 
   /* --- Navbar --- */
