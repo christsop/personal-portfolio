@@ -55,7 +55,7 @@ const Navbar = () => {
                 <div className="navbar-brand">Christos</div>
 
                 <DarkModeSwitch
-                    style={{ marginLeft: "calc(50% - 30px)" }}
+                    style={{ marginLeft: "calc(50% - 30px)", position: 'absolute' }}
                     className="mobile-only"
                     checked={isDarkTheme}
                     onChange={() => setIsDarkTheme(!isDarkTheme)}
