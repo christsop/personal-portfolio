@@ -1,6 +1,6 @@
 .hero {
     background-color: var(--background-color);
-    color: #fff;
+    color: var(--text-color-light);
     text-align: center;
     padding: 4rem 1rem;
     display: flex;
@@ -37,7 +37,7 @@
 .hero-subtitle {
     margin-top: 1rem;
     font-size: 1.125rem;
-    color: #d1d5db;
+    color: var(--hero-subtitle-color);
     max-width: 730px;
 }
 
@@ -95,7 +95,7 @@
 .typewriter-text .cursor {
     display: inline-block;
     animation: blink 1s step-start infinite;
-    color: #fff;
+    color: var(--typewriter-cursor-color);
     font-weight: bold;
 }
 

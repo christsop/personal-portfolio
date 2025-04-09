@@ -65,13 +65,16 @@ button:focus-visible {
   }
 }
 
+/* Root Variables */
 :root {
+  /* --- Primary Button Styles --- */
   --primary-button-bg: #02dbc7;
   --primary-button-color: #1d1e2c;
-  --primary-button-bgHover: #07bfb7;
+  --primary-button-bgHover: #02dbc7;
   --primary-button-colorHover: #1d1e2c;
   --primary-button-radius: 4px;
 
+  /* --- Secondary Button Styles --- */
   --secondary-button-bg: #1d1e2c;
   --secondary-button-color: #07bfb7;
   --secondary-button-bgHover: #2e2f42;
@@ -79,7 +82,128 @@ button:focus-visible {
   --secondary-button-radius: 4px;
   --secondary-button-border-color: #07bfb7;
 
-  --background-color: #1d1e2c;
+  /* --- Background Colors --- */
+  --background-color: #1d1e2c; /* Background color for dark theme */
   --background-color-secondary: #2e2e48;
 
+  /* --- Text Colors --- */
+  --text-color-light: white; /* Used for light text */
+  --text-color-muted: #9ca3af; /* Muted text color (e.g., secondary text or descriptions) */
+
+  /* --- Utility and Effects --- */
+  --box-shadow-hover: rgba(0, 0, 0, 0.3); /* Hover effect for box shadows */
+
+  /* --- Gradient Colors --- */
+  --gradient-service-id: linear-gradient(to right, #16a34a, #60a5fa); /* Gradient used for elements (Service ID, stats, etc.) */
+  --service-description-color: #d1d5db; /* For service descriptions */
+  --service-link-color: #34d399; /* Links/buttons primary color */
+  --service-link-hover-bg: #34d399; /* Button/link hover background */
+
+  /* --- Navbar --- */
+  --navbar-link-color: var(--text-color-light); /* Navbar primary link color */
+  --navbar-link-hover-color: #a0aec0; /* Navbar link hover color */
+
+  /* --- Hero Section --- */
+  --hero-subtitle-color: #d1d5db; /* Subtitle light gray color */
+
+  /* --- Typewriter/Cursor Animation --- */
+  --typewriter-cursor-color: var(--text-color-light);
+
+  /* --- Form (Inputs) --- */
+  --form-input-bg-color: #1f2937; /* Background for inputs */
+  --form-input-border-color: #4b5563; /* Border color for inputs */
+  --email-input-focus-border-color: #00e676; /* Focused input border color */
+
+  /* --- Footer --- */
+  --footer-description-color: #b3b3b3; /* Footer description and link text */
+  --email-input-bg-color: #2c2c2c; /* Input background in footer */
+  --email-input-border-color: #4d4d4d; /* Footer input border color */
+  --subscribe-button-bg: linear-gradient(to right, #00e676, #2196f3); /* Subscribe button gradient */
+  --footer-bottom-border-color: #4d4d4d; /* Divider at bottom of footer */
+  --footer-social-link-hover-color: var(--text-color-light); /* Hover color for footer social links */
+  --footer-link-hover-color: var(--text-color-light); /* Hover color for footer links */
+
+  /* --- About/Skills --- */
+  --contact-subheading-gradient: linear-gradient(to right, var(--primary-button-bg), #3b82f6); /* Contact subheading gradient */
+  --contact-link-color: var(--text-color-light); /* Contact link color */
+  --skill-bar-bg: #1f2937; /* Skill bar background for dark theme */
+  --skill-fill-gradient: linear-gradient(to right, #22c55e, #3b82f6); /* Skill fill gradient */
+  --stat-number-gradient: linear-gradient(to right, #22c55e, #3b82f6); /* Gradient for stats (e.g., numbers) */
+  --about-text-color: var(--text-color-light); /* Text color in About section */
+
+  /* --- Hover Effects / Misc --- */
+  --logo-hover-shadow: #646cffaa; /* Glow for logo on hover */
+  --logo-react-hover-shadow: #61dafbaa; /* Glow effect for React logo */
+  --docs-text-color: #888; /* Gray color for "read-the-docs" text */
+}
+
+.light-theme {
+  /* --- Primary Button Styles --- */
+  --primary-button-bg: #02dbc7; /* Light button background */
+  --primary-button-color: #1a1a1a; /* Light button text color */
+  --primary-button-bgHover: #02dbc7; /* Light button hover background */
+  --primary-button-colorHover: #121212; /* Light button hover text color */
+  --primary-button-radius: 4px; /* No change, keep the same */
+
+  /* --- Secondary Button Styles --- */
+  --secondary-button-bg: #ffffff; /* Light secondary button background */
+  --secondary-button-color: #121212; /* Darker text for contrast */
+  --secondary-button-bgHover: #eeeeee; /* Hover effect for light theme */
+  --secondary-button-colorHover: #000000; /* Black hover text color */
+  --secondary-button-radius: 4px; /* No change */
+  --secondary-button-border-color: #cccccc; /* Subtle light gray border */
+
+  /* --- Background Colors --- */
+  --background-color: #E4E4E4; /* Main background for light theme */
+  --background-color-secondary: #e9ecef; /* Light secondary background */
+
+  /* --- Text Colors --- */
+  --text-color-light: #121212; /* Darker text for light theme */
+  --text-color-muted: #6b7280; /* Muted gray for light theme */
+
+  /* --- Utility and Effects --- */
+  --box-shadow-hover: rgba(0, 0, 0, 0.1); /* Softer shadow for light theme */
+
+  /* --- Gradient Colors --- */
+  --gradient-service-id: linear-gradient(to right, #16a34a, #60a5fa); /* Keep the same */
+  --service-description-color: #495464; /* Slightly darker muted gray */
+  --service-link-color: #213547; /* Dark link color in light theme */
+  --service-link-hover-bg: #d1e7dd; /* Light hover color for links */
+
+  /* --- Navbar --- */
+  --navbar-link-color: #213547; /* Dark link color for navbar */
+  --navbar-link-hover-color: #495464; /* Softer gray for hover */
+
+  /* --- Hero Section --- */
+  --hero-subtitle-color: #495464; /* Darker gray for hero subtitles */
+
+  /* --- Typewriter/Cursor Animation --- */
+  --typewriter-cursor-color: #121212; /* Black cursor in light theme */
+
+  /* --- Form (Inputs) --- */
+  --form-input-bg-color: #ffffff; /* White background for inputs */
+  --form-input-border-color: #cccccc; /* Light gray border around inputs */
+  --email-input-focus-border-color: #34d399; /* Green focus border for inputs */
+
+  /* --- Footer --- */
+  --footer-description-color: #495464; /* Dark gray footer text */
+  --email-input-bg-color: #f8f9fa; /* Light footer input background */
+  --email-input-border-color: #e0e0e0; /* Slightly lighter gray for inputs */
+  --subscribe-button-bg: linear-gradient(to right, #34d399, #60a5fa); /* Lighter version of the gradient */
+  --footer-bottom-border-color: #dcdde1; /* Footer divider border */
+  --footer-social-link-hover-color: #121212; /* Black hover for social links */
+  --footer-link-hover-color: #121212; /* Dark hover for links */
+
+  /* --- About/Skills --- */
+  --contact-subheading-gradient: linear-gradient(to right, #06b6d4, #2563eb); /* Lighter gradient */
+  --contact-link-color: #213547; /* Darker text for contact links */
+  --skill-bar-bg: #e9ecef; /* Lighter skill bar background */
+  --skill-fill-gradient: linear-gradient(to right, #16a34a, #2563eb); /* Lighter skill bar gradient */
+  --stat-number-gradient: linear-gradient(to right, #16a34a, #2563eb); /* Lighter stats gradient */
+  --about-text-color: #213547; /* Dark text for about section */
+
+  /* --- Hover Effects / Misc --- */
+  --logo-hover-shadow: #b3d4fc; /* Softer blue glow for hover */
+  --logo-react-hover-shadow: #a5d8ff; /* Lighter React logo glow */
+  --docs-text-color: #444; /* Darker gray for "read-the-docs" */
 }

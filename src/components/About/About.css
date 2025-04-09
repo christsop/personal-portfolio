@@ -1,6 +1,6 @@
 .about-section {
     background-color: var(--background-color);
-    color: white;
+    color: var(--about-text-color);
     padding: 5rem 1rem;
 }
 
@@ -65,7 +65,7 @@
 
 .skill-bar {
     flex-grow: 1;
-    background-color: #1f2937;
+    background-color: var(--skill-bar-bg);
     border-radius: 9999px;
     height: 0.625rem;
     overflow: hidden;
@@ -74,7 +74,7 @@
 .skill-fill {
     height: 100%;
     border-radius: 9999px;
-    background: linear-gradient(to right, #22c55e, #3b82f6);
+    background: var(--skill-fill-gradient);
     transition: transform 0.3s ease;
 }
 
@@ -104,7 +104,7 @@
 .stat-number {
     font-size: 1.5rem;
     font-weight: bold;
-    background: linear-gradient(to right, #22c55e, #3b82f6);
+    background: var(--stat-number-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

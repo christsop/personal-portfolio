@@ -1,6 +1,6 @@
 .navbar {
     background-color: var(--background-color);
-    color: white;
+    color: var(--text-color-light);
     padding-left: 2rem;
     padding-right: 2rem;
 }
@@ -55,14 +55,14 @@
 }
 
 .navbar-link {
-    color: white;
+    color: var(--navbar-link-color);
     text-decoration: none;
     transition: color 0.3s ease;
     padding: 3px 10px;
 }
 
 .navbar-link:hover {
-    color: #a0aec0; /* gray-400 equivalent */
+    color: var(--navbar-link-hover-color);
 }
 
 .connect-button {
