@@ -53,7 +53,7 @@ const Service = () => {
                 <h2 className="services-heading">My Services</h2>
                 <div className="services-grid">
                     {services.map((service) => (
-                        <div key={service.id} className={`service-card ${expandedId === service.id ? 'expanded' : ''}`}>
+                        <div key={service.id} className="service-card">
                             <h3 className="service-title">{service.title}</h3>
                             <p className="service-description">{service.description}</p>
 
