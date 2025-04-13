@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import "./Navbar.css";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { FaChevronDown } from "react-icons/fa";
+import {useOutsideClick} from "../../hooks.jsx";
 
 const LanguageDropdown = ({ currentLanguage, changeLanguage }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -26,13 +27,20 @@ const LanguageDropdown = ({ currentLanguage, changeLanguage }) => {
         setIsOpen(false); // Close dropdown after language selection
     };
 
+    const handleClickOutside = () => {
+        setIsOpen(false);
+    }
+
+    const ref = useOutsideClick(handleClickOutside);
+
     return (
-        <div className="custom-dropdown">
+        <div ref={ref} className="custom-dropdown">
             <a
                 className="custom-dropdown-btn"
                 onClick={handleDropdownToggle}
                 aria-expanded={isOpen}>
-                {currentLanguageLabel} <FaChevronDown className="dropdown-icon" />
+                <span className="text">{currentLanguageLabel}</span>
+                <FaChevronDown className="dropdown-icon" />
             </a>
             <ul className={`dropdown-options ${isOpen ? "open" : ""}`}>
                 {languages.map((lang) => (
@@ -82,6 +90,12 @@ const Navbar = () => {
         { name: t("navbar.contact"), link: "#contact" },
     ];
 
+    const handleClickOutside = () => {
+        setIsMenuOpen(false);
+    }
+
+    const ref = useOutsideClick(handleClickOutside);
+
     return (
         <nav className="navbar">
             <div className="navbar-container">
@@ -120,6 +134,7 @@ const Navbar = () => {
 
                 {/* Hamburger Menu (Mobile Only) */}
                 <div
+                    ref={ref}
                     className={`hamburger ${isMenuOpen ? "open" : ""}`}
                     onClick={() => setIsMenuOpen((prevState) => !prevState)}>
                     <div className="bar"></div>
