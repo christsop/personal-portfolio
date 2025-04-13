@@ -1,0 +1,107 @@
+{
+  "welcome": "Willkommen bei meiner App",
+  "description": "Dies ist eine internationalisierte React-App.",
+  "navbar": {
+    "brand": "Christos",
+    "home": "Startseite",
+    "aboutMe": "Über mich",
+    "services": "Dienstleistungen",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "connect": "Verbinden"
+  },
+  "hero": {
+    "altText": "Profilbild von Christos Tsopelas",
+    "introduction": "Ich bin",
+    "name": "Christos Tsopelas",
+    "role": "Front-End Entwickler",
+    "subtitle": "Ich spezialisiere mich auf die Erstellung moderner und reaktionsschneller Webanwendungen.",
+    "contactButton": "Kontaktieren Sie mich",
+    "resumeButton": "Lebenslauf"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie mich",
+    "subheading": "Lass uns reden",
+    "description": "Ich bin offen für Gespräche über Webentwicklungsprojekte oder Partnerschaften.",
+    "location": "Athen, Griechenland",
+    "form": {
+      "name": "Ihr Name",
+      "namePlaceholder": "Geben Sie Ihren Namen ein",
+      "email": "E-Mail",
+      "emailPlaceholder": "Geben Sie Ihre E-Mail ein",
+      "message": "Nachricht",
+      "messagePlaceholder": "Geben Sie Ihre Nachricht ein",
+      "thankYou": "Vielen Dank für Ihre Nachricht",
+      "send": "Senden"
+    }
+  },
+  "services": {
+    "title": "Meine Dienstleistungen",
+    "readMore": "Mehr lesen",
+    "showLess": "Weniger anzeigen",
+    "items": [
+      {
+        "title": "Frontend-Entwicklung",
+        "description": "Erstellen von schnellen, reaktionsschnellen und barrierefreien Benutzerschnittstellen.",
+        "moreInfo": "Erfahrung mit React, Vue, Angular - Durchführung von Designs zu Webanwendungen."
+      },
+      {
+        "title": "Backend-Entwicklung",
+        "description": "Erstellen von robusten Backend-Systemen mit Node.js und Express.",
+        "moreInfo": "Fokus auf effiziente Lösungen mit REST-APIs und SQL-/NoSQL-Datenbanken (z. B. MongoDB)."
+      }
+    ]
+  },
+  "footer": {
+    "title": "Christos",
+    "description": "Full-Stack-Entwickler mit Sitz in Griechenland, spezialisiert auf Webentwicklung.",
+    "copy": "© {{year}} Christos. Alle Rechte vorbehalten.",
+    "links": {
+      "privacy": "Datenschutz",
+      "terms": "Nutzungsbedingungen"
+    }
+  },
+  "about": {
+    "title": "Über mich",
+    "altText": "Profilbild von Christos Tsopelas",
+    "description": "Ich bin ein leidenschaftlicher Front-End-Entwickler mit 8 Jahren Erfahrung, der hauptsächlich mit JavaScript und React arbeitet, sich auf hochwertige Benutzererfahrungen konzentriert und zu einer stark kollaborativen Arbeitsumgebung beitragen möchte.",
+    "skills": {
+      "javascript": "JavaScript",
+      "react": "React JS",
+      "vue": "Vue",
+      "angular": "Angular",
+      "node": "Node JS"
+    },
+    "stats": {
+      "experience": {
+        "number": "8+",
+        "label": "Jahre Erfahrung"
+      },
+      "projects": {
+        "number": "20+",
+        "label": "Abgeschlossene Projekte"
+      },
+      "companies": {
+        "number": "5+",
+        "label": "Unternehmen, mit denen gearbeitet wurde"
+      }
+    }
+  },
+  "projects": {
+    "title": "Meine Projekte",
+    "items": [
+      {
+        "name": "Mitarbeiter MS",
+        "technologies": "MERN Stack"
+      },
+      {
+        "name": "Blog-App",
+        "technologies": "MERN Stack"
+      },
+      {
+        "name": "Buch MS",
+        "technologies": "MERN Stack"
+      }
+    ]
+  }
+}

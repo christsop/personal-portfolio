@@ -9,5 +9,99 @@
     "projects": "Projects",
     "contact": "Contact",
     "connect": "Connect"
+  },
+  "hero": {
+    "altText": "Profile picture of Christos Tsopelas",
+    "introduction": "I'm",
+    "name": "Christos Tsopelas",
+    "role": "Front-End Developer",
+    "subtitle": "I specialize in building modern and responsive web applications.",
+    "contactButton": "Contact With Me",
+    "resumeButton": "Resume"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subheading": "Let's Talk",
+    "description": "I'm open to discussing web development projects or partnership opportunities.",
+    "location": "Athens, Greece",
+    "form": {
+      "name": "Your Name",
+      "namePlaceholder": "Enter Your Name",
+      "email": "Email",
+      "emailPlaceholder": "Enter Your Email",
+      "message": "Message",
+      "messagePlaceholder": "Enter Your Message",
+      "thankYou": "Thank you for reaching out",
+      "send": "Send"
+    }
+  },
+  "services": {
+    "title": "My Services",
+    "readMore": "Read More",
+    "showLess": "Show Less",
+    "items": [
+      {
+        "title": "Frontend Development",
+        "description": "Crafting fast, responsive, and accessible interfaces using modern libraries and frameworks.",
+        "moreInfo": "Having experience with React, Vue, Angular, and other frameworks, I convert designs into functional, responsive, and user-friendly web applications."
+      },
+      {
+        "title": "Backend Development",
+        "description": "Building robust backend systems using JavaScript frameworks like Node.js and Express.",
+        "moreInfo": "I focus on efficient backend solutions with REST APIs, MVC architecture, and integrations with SQL and NoSQL databases such as MongoDB and PostgreSQL."
+      }
+    ]
+  },
+  "footer": {
+    "title": "Christos",
+    "description": "Full-Stack Developer based in Greece, specializing in web and software development.",
+    "copy": "© {{year}} Christos. All rights reserved.",
+    "links": {
+      "privacy": "Privacy",
+      "terms": "Terms of Service"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "altText": "Profile picture of Christos Tsopelas",
+    "description": "I am a passionate Front-end developer with 8 years of experience mainly working with Javascript and React focusing on delivering high-quality user experiences and looking forward to contributing to a highly collaborative work environment, finding solutions and determining customer satisfaction.",
+    "skills": {
+      "javascript": "JavaScript",
+      "react": "React JS",
+      "vue": "Vue",
+      "angular": "Angular",
+      "node": "Node JS"
+    },
+    "stats": {
+      "experience": {
+        "number": "8+",
+        "label": "Years Experience"
+      },
+      "projects": {
+        "number": "20+",
+        "label": "Projects Completed"
+      },
+      "companies": {
+        "number": "5+",
+        "label": "Companies worked with"
+      }
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "items": [
+      {
+        "name": "Employee MS",
+        "technologies": "MERN Stack"
+      },
+      {
+        "name": "Blog App",
+        "technologies": "MERN Stack"
+      },
+      {
+        "name": "Book MS",
+        "technologies": "MERN Stack"
+      }
+    ]
   }
 }
