@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./Service.css";
+import {Helmet} from "react-helmet";
 
 const Service = () => {
     const { t } = useTranslation(); // Access the i18n translation function
@@ -21,32 +22,42 @@ const Service = () => {
     ];
 
     return (
-        <div className="services-section" id="service">
-            <div className="services-container">
-                <h2 className="services-heading">{t("services.title")}</h2>
-                <div className="services-grid">
-                    {services.map((service) => (
-                        <div key={service.id} className="service-card">
-                            <h3 className="service-title">{t(service.titleKey)}</h3>
-                            <p className="service-description">{t(service.descKey)}</p>
+        <>
+            {/* SEO Meta Tags */}
+            <Helmet>
+                <title>{t("services.seo.title")}</title>
+                <meta name="description" content={t("services.seo.description")} />
+                <meta name="keywords" content={t("services.seo.keywords")} />
+                <meta name="author" content={t("services.seo.author")} />
+            </Helmet>
 
-                            {expandedId === service.id && (
-                                <p className="service-more-info">{t(service.moreInfoKey)}</p>
-                            )}
+            <div className="services-section" id="service">
+                <div className="services-container">
+                    <h2 className="services-heading">{t("services.title")}</h2>
+                    <div className="services-grid">
+                        {services.map((service) => (
+                            <div key={service.id} className="service-card">
+                                <h3 className="service-title">{t(service.titleKey)}</h3>
+                                <p className="service-description">{t(service.descKey)}</p>
 
-                            <a
-                                className="service-link"
-                                onClick={() => toggleReadMore(service.id)}
-                            >
-                                {expandedId === service.id
-                                    ? t("services.readLess")
-                                    : t("services.readMore")}
-                            </a>
-                        </div>
-                    ))}
+                                {expandedId === service.id && (
+                                    <p className="service-more-info">{t(service.moreInfoKey)}</p>
+                                )}
+
+                                <a
+                                    className="service-link"
+                                    onClick={() => toggleReadMore(service.id)}
+                                >
+                                    {expandedId === service.id
+                                        ? t("services.readLess")
+                                        : t("services.readMore")}
+                                </a>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

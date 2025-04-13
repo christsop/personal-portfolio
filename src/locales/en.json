@@ -2,6 +2,16 @@
   "welcome": "Welcome to my app",
   "description": "This is an internationalized React app.",
   "navbar": {
+    "seo": {
+      "title": "Portfolio - Web Developer",
+      "description": "Portfolio website showcasing my skills, projects, and contact information for web development services.",
+      "keywords": "Web Developer, Portfolio, React, Frontend Development, Backend Development, Full Stack Developer",
+      "author": "Christos Tsopelas",
+      "ogTitle": "Portfolio - Web Developer",
+      "ogDescription": "Check out my portfolio to view projects, services, and contact information.",
+      "ogImage": "https://example.com/og-image.jpg",
+      "ogUrl": "https://example.com"
+    },
     "brand": "Christos",
     "home": "Home",
     "aboutMe": "About Me",
@@ -11,6 +21,16 @@
     "connect": "Connect"
   },
   "hero": {
+    "seo": {
+      "title": "Christos Tsopelas - Front-End Developer",
+      "description": "I'm Christos Tsopelas, a Front-End Developer specializing in building modern and responsive web applications. Learn more about me and my projects.",
+      "keywords": "Christos Tsopelas, Front-End Developer, Web Development, React, Portfolio, Responsive Design, JavaScript",
+      "author": "Christos Tsopelas",
+      "ogTitle": "Christos Tsopelas - Front-End Developer",
+      "ogDescription": "Discover Christos Tsopelas' portfolio, showcasing top-notch web development projects, skills, and contact information.",
+      "ogImage": "https://example.com/hero-og-image.jpg",
+      "ogUrl": "https://example.com"
+    },
     "altText": "Profile picture of Christos Tsopelas",
     "introduction": "I'm",
     "name": "Christos Tsopelas",
@@ -20,6 +40,12 @@
     "resumeButton": "Resume"
   },
   "contact": {
+    "seo": {
+      "title": "Contact - Christos Portfolio",
+      "description": "Contact me to discuss projects, collaborations, or opportunities in web development.",
+      "keywords": "Contact, Web Development, Christos Portfolio, Email, Phone",
+      "author": "Christos Tsopelas"
+    },
     "title": "Contact Me",
     "subheading": "Let's Talk",
     "description": "I'm open to discussing web development projects or partnership opportunities.",
@@ -36,6 +62,12 @@
     }
   },
   "services": {
+    "seo": {
+      "title": "Services - Christos Portfolio",
+      "description": "Discover the professional services offered by Christos Tsopelas, including frontend, backend, and API development.",
+      "keywords": "Services, Web Development, Frontend, Backend, API Development, Testing, Performance",
+      "author": "Christos Tsopelas"
+    },
     "title": "My Services",
     "readMore": "Read More",
     "readLess": "Show Less",
@@ -71,6 +103,12 @@
     }
   },
   "footer": {
+    "seo": {
+      "title": "Footer - Christos Portfolio",
+      "description": "Connect with Christos Tsopelas through social media or review the site's privacy policy and terms of service.",
+      "keywords": "Footer, Privacy Policy, Terms of Service, Social Media, Christos Portfolio",
+      "author": "Christos Tsopelas"
+    },
     "title": "Christos",
     "description": "Full-Stack Developer based in Greece, specializing in web and software development.",
     "copy": "© {{year}} Christos. All rights reserved.",
@@ -80,6 +118,12 @@
     }
   },
   "about": {
+    "seo": {
+      "title": "About - Christos Portfolio",
+      "description": "Learn more about Christos Tsopelas, his skills, expertise, and experience in frontend and backend development.",
+      "keywords": "About Christos Tsopelas, Web Development, React, Frontend, Backend",
+      "author": "Christos Tsopelas"
+    },
     "title": "About Me",
     "altText": "Profile picture of Christos Tsopelas",
     "description": "I am a passionate Front-end developer with 8 years of experience mainly working with Javascript and React focusing on delivering high-quality user experiences and looking forward to contributing to a highly collaborative work environment, finding solutions and determining customer satisfaction.",
@@ -121,5 +165,15 @@
         "technologies": "MERN Stack"
       }
     ]
+  },
+  "seo": {
+    "title": "Portfolio - Web Developer",
+    "description": "Portfolio website showcasing my skills, projects, and contact information for web development services.",
+    "keywords": "Web Developer, Portfolio, React, Frontend Development, Backend Development, Full Stack Developer",
+    "author": "Christos Tsopelas",
+    "ogTitle": "Portfolio - Web Developer",
+    "ogDescription": "Check out my portfolio to view projects, services, and contact information.",
+    "ogImage": "https://example.com/og-image.jpg",
+    "ogUrl": "https://example.com"
   }
 }
