@@ -78,7 +78,7 @@ const Navbar = () => {
         { name: t("navbar.home"), link: "#home" },
         { name: t("navbar.aboutMe"), link: "#about" },
         { name: t("navbar.services"), link: "#service" },
-        { name: t("navbar.projects"), link: "#project" },
+        // { name: t("navbar.projects"), link: "#project" },
         { name: t("navbar.contact"), link: "#contact" },
     ];
 
