@@ -115,7 +115,7 @@ const Contact = () => {
                                         required
                                     />
                                 </div>
-                                <button type="submit" className="form-submit-btn">
+                                <button type="submit" className="send-button">
                                     {t("contact.form.send")}
                                 </button>
                             </form>
