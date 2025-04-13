@@ -37,6 +37,7 @@
 
 .project-card {
     background-color: var(--background-color-secondary);
+    border: 1px solid #0000001F;
     padding: 1.5rem;
     cursor: pointer;
     border-radius: 0.5rem;

@@ -14,7 +14,7 @@
     "altText": "Photo de profil de Christos Tsopelas",
     "introduction": "Je suis",
     "name": "Christos Tsopelas",
-    "role": "Front-End Developer",
+    "role": "Développeur Front-End",
     "subtitle": "Je me spécialise dans la création d'applications web modernes et réactives.",
     "contactButton": "Contactez-moi",
     "resumeButton": "CV"
@@ -38,23 +38,41 @@
   "services": {
     "title": "Mes Services",
     "readMore": "Lire la suite",
-    "showLess": "Lire moins",
-    "items": [
-      {
-        "title": "Développement Frontend",
-        "description": "Création d'interfaces rapides, réactives et accessibles à l'aide de bibliothèques et frameworks modernes.",
-        "moreInfo": "Expérimenté avec React, Vue, Angular et bien d'autres frameworks, je transforme les conceptions en applications fonctionnelles et conviviales."
-      },
-      {
-        "title": "Développement Backend",
-        "description": "Création de systèmes backend robustes avec Node.js et Express.",
-        "moreInfo": "Je me concentre sur des solutions backend efficaces, associées à des API REST et à l'intégration de bases de données (SQL/NoSQL) comme MongoDB et PostgreSQL."
-      }
-    ]
+    "readLess": "Lire moins",
+    "frontend": {
+      "title": "Développement Frontend",
+      "description": "Création d'interfaces rapides, réactives et accessibles utilisant des bibliothèques et frameworks modernes.",
+      "moreInfo": "Avec une solide expérience en React, Vue, Angular et de nombreux autres frameworks, je transforme des idées et des maquettes de conception en applications web fonctionnelles. Je respecte les meilleures pratiques pour garantir une expérience utilisateur cohérente sur toutes les plateformes."
+    },
+    "backend": {
+      "title": "Développement Backend",
+      "description": "Construction de systèmes backend robustes avec des frameworks JavaScript comme Node.js et Express.",
+      "moreInfo": "Je mets l'accent sur la création de solutions efficaces, à la fois techniquement viables et adaptées aux besoins utilisateur. Je mets en œuvre des APIs REST avec une architecture MVC et les intègre à des bases de données SQL et NoSQL. Expérimenté en authentification basée sur JWT et communication par WebSocket."
+    },
+    "api": {
+      "title": "Conception et intégration d'API",
+      "description": "Conception d'API REST sécurisées et intégration de services tiers comme des bases de données et CMS.",
+      "moreInfo": "Intégration des APIs avec des CMS headless comme Contentful et des bases de données comme Elasticsearch ou Firebase avec un accent particulier sur l'efficacité. Connexion au frontend via Axios et WebSocket, en garantissant la sécurité, la vitesse et une gestion efficace des erreurs."
+    },
+    "performance": {
+      "title": "Optimisation des performances",
+      "description": "Amélioration de la vitesse de chargement, du référencement naturel (SEO) et des temps de réponse avec des rapports Lighthouse.",
+      "moreInfo": "J'applique diverses techniques telles que les imports dynamiques, l'optimisation des images, la compression des fichiers, la réutilisation et le fractionnement du code, la mise en cache. Ces meilleures pratiques suivent les dernières tendances pour améliorer considérablement les performances de votre site."
+    },
+    "components": {
+      "title": "Bibliothèques de composants et systèmes de conception",
+      "description": "Utilisation de Storybook ou d'outils similaires pour construire des composants UI et des pages de manière isolée.",
+      "moreInfo": "Au fil des années, j'ai compris le besoin des clients d'avoir une bibliothèque de composants reprenant tous les composants d'une application, comme une documentation. Ces bibliothèques permettent également de développer et tester des composants UI rapidement et de manière isolée."
+    },
+    "testing": {
+      "title": "Tests et automatisation du déploiement",
+      "description": "Garantir la qualité du code avec des tests unitaires et d'intégration et automatiser les déploiements avec CI/CD.",
+      "moreInfo": "Expérience avec GitHub Actions, Vercel CI, et le déploiement basé sur Docker. Je couvre la plupart de mon code avec des tests utilisant Jest et React Testing Library pour garantir la stabilité de l'application."
+    }
   },
   "footer": {
     "title": "Christos",
-    "description": "Développeur Full-Stack basé en Grèce, spécialisé dans le développement web et logiciel.",
+    "description": "Développeur Full-Stack basé en Grèce, spécialisé dans la création de sites web et de logiciels.",
     "copy": "© {{year}} Christos. Tous droits réservés.",
     "links": {
       "privacy": "Politique de confidentialité",
@@ -64,7 +82,7 @@
   "about": {
     "title": "À propos de moi",
     "altText": "Photo de profil de Christos Tsopelas",
-    "description": "Je suis un développeur front-end passionné avec 8 ans d'expérience, travaillant principalement avec JavaScript et React, et me concentrant sur la création d'expériences utilisateur de haute qualité.",
+    "description": "Je suis un développeur front-end passionné ayant 8 ans d'expérience, travaillant principalement avec JavaScript et React, et axé sur la création d'expériences utilisateur de haute qualité. Je suis également enthousiaste à l'idée de travailler dans un environnement collaboratif, de résoudre des problèmes et de garantir la satisfaction des clients.",
     "skills": {
       "javascript": "JavaScript",
       "react": "React JS",
@@ -79,11 +97,11 @@
       },
       "projects": {
         "number": "20+",
-        "label": "Projets réalisés"
+        "label": "Projets terminés"
       },
       "companies": {
         "number": "5+",
-        "label": "Entreprises avec lesquelles j'ai travaillé"
+        "label": "Collaborations avec des entreprises"
       }
     }
   },

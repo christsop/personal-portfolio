@@ -38,19 +38,37 @@
   "services": {
     "title": "Meine Dienstleistungen",
     "readMore": "Mehr lesen",
-    "showLess": "Weniger anzeigen",
-    "items": [
-      {
-        "title": "Frontend-Entwicklung",
-        "description": "Erstellen von schnellen, reaktionsschnellen und barrierefreien Benutzerschnittstellen.",
-        "moreInfo": "Erfahrung mit React, Vue, Angular - Durchführung von Designs zu Webanwendungen."
-      },
-      {
-        "title": "Backend-Entwicklung",
-        "description": "Erstellen von robusten Backend-Systemen mit Node.js und Express.",
-        "moreInfo": "Fokus auf effiziente Lösungen mit REST-APIs und SQL-/NoSQL-Datenbanken (z. B. MongoDB)."
-      }
-    ]
+    "readLess": "Weniger anzeigen",
+    "frontend": {
+      "title": "Frontend-Entwicklung",
+      "description": "Erstellen von schnellen, reaktionsschnellen und barrierefreien Benutzerschnittstellen mit modernen Frameworks.",
+      "moreInfo": "Mit Erfahrung in React, Vue und Angular verwandle ich Designs und Wireframes in funktionale, benutzerfreundliche und reaktionsschnelle Webanwendungen."
+    },
+    "backend": {
+      "title": "Backend-Entwicklung",
+      "description": "Erstellen robuster Backends mit JavaScript-Frameworks wie Node.js und Express.",
+      "moreInfo": "Ich konzentriere mich darauf, effiziente und skalierbare Backend-Systeme mit REST-APIs, MVC-Architektur und SQL/NoSQL-Datenbanken wie MongoDB und PostgreSQL zu erstellen."
+    },
+    "api": {
+      "title": "API-Design & Integration",
+      "description": "Erstellen sicherer REST-APIs und Integration von Diensten wie CMS und Datenbanken.",
+      "moreInfo": "Ich entwerfe und implementiere sichere APIs und integriere sie in Systeme wie Contentful und Firebase, um Datenverbindungen effizienter zu machen. APIs werden außerdem nahtlos mit dem Frontend verbunden."
+    },
+    "performance": {
+      "title": "Performance-Optimierung",
+      "description": "Verbessern der Seitenperformance mit Techniken wie dynamischem Import und Caching.",
+      "moreInfo": "Mit Tools wie Lighthouse verbessere ich die Ladegeschwindigkeit von Webseiten, die SEO-Leistung und die Benutzerfreundlichkeit durch Techniken wie Lazy Loading, Bildkomprimierung und Code-Splitting."
+    },
+    "components": {
+      "title": "Komponentenbibliotheken & Designsysteme",
+      "description": "Erstellen von UI-Bibliotheken mit Tools wie Storybook für wiederverwendbare Komponenten.",
+      "moreInfo": "Ich helfe dabei, konsistente Designsysteme und wiederverwendbare Komponentenbibliotheken zu erstellen, um die Entwicklung, das Testen und die Dokumentation von UI-Elementen effizient zu gestalten."
+    },
+    "testing": {
+      "title": "Testen & Deployment-Automatisierung",
+      "description": "Sicherstellen der Codequalität durch Tests und Automatisierung von Deployments mit CI/CD-Pipelines.",
+      "moreInfo": "Mit Tools wie Jest und React Testing Library schreibe ich umfassende Unit- und Integrationstests. Ich automatisiere auch Build-, Test- und Deployment-Pipelines mit Tools wie GitHub Actions oder Docker."
+    }
   },
   "footer": {
     "title": "Christos",

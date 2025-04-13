@@ -37,28 +37,46 @@
   },
   "services": {
     "title": "Mis Servicios",
-    "readMore": "Leer más",
-    "showLess": "Leer menos",
-    "items": [
-      {
-        "title": "Desarrollo Frontend",
-        "description": "Creación de interfaces rápidas y responsivas utilizando tecnologías modernas.",
-        "moreInfo": "Con experiencia en React, Vue, Angular y otros frameworks, desarrollo aplicaciones funcionales que se adaptan a las necesidades del usuario."
-      },
-      {
-        "title": "Desarrollo Backend",
-        "description": "Creación de sistemas backend robustos utilizando tecnologías como Node.js.",
-        "moreInfo": "Proporciono soluciones backend eficientes con APIs REST y bases de datos como MongoDB y PostgreSQL."
-      }
-    ]
+    "readMore": "Leer Más",
+    "readLess": "Leer Menos",
+    "frontend": {
+      "title": "Desarrollo Frontend",
+      "description": "Creación de interfaces rápidas, modernas y accesibles con bibliotecas y frameworks actuales.",
+      "moreInfo": "Con experiencia en React, Vue y Angular, convierto diseños y bocetos en aplicaciones web funcionales, accesibles y receptivas, asegurando una experiencia de usuario consistente en todos los dispositivos."
+    },
+    "backend": {
+      "title": "Desarrollo Backend",
+      "description": "Construcción de sistemas backend confiables usando frameworks de JavaScript como Node.js y Express.",
+      "moreInfo": "Me enfoco en crear sistemas backend eficientes y escalables con APIs REST, arquitectura MVC, y bases de datos SQL/NoSQL como MongoDB y PostgreSQL, asegurando una integración fluida con los sistemas frontales."
+    },
+    "api": {
+      "title": "Diseño e Integración de APIs",
+      "description": "Diseño de APIs REST seguras y conexión con servicios como CMS y bases de datos.",
+      "moreInfo": "Diseño e implemento APIs seguras e integradas con sistemas como Contentful y Firebase, para que la conexión de datos sea eficiente. También conecto APIs con el frontend para lograr una comunicación fluida."
+    },
+    "performance": {
+      "title": "Optimización de Rendimiento",
+      "description": "Mejorar el rendimiento de la página utilizando técnicas como importaciones dinámicas y almacenamiento en caché.",
+      "moreInfo": "Con herramientas como Lighthouse, optimizo los tiempos de carga de las páginas, el rendimiento SEO y la usabilidad, implementando técnicas como carga diferida (lazy loading), compresión de imágenes y separación del código (code splitting)."
+    },
+    "components": {
+      "title": "Bibliotecas de Componentes y Sistemas de Diseño",
+      "description": "Construcción de bibliotecas de UI reutilizables con herramientas como Storybook.",
+      "moreInfo": "Ayudo a los clientes a crear sistemas de diseño consistentes y bibliotecas de componentes reutilizables que agilizan el desarrollo, las pruebas y la documentación de los elementos de la interfaz de usuario."
+    },
+    "testing": {
+      "title": "Pruebas y Automatización de Implementaciones",
+      "description": "Asegurar la calidad del código mediante pruebas y automatizar las implementaciones con pipelines CI/CD.",
+      "moreInfo": "Con herramientas como Jest y React Testing Library, escribo pruebas unitarias e integrales robustas. También automatizo los pipelines de compilación, prueba e implementación con herramientas como GitHub Actions o Docker."
+    }
   },
   "footer": {
     "title": "Christos",
     "description": "Desarrollador Full-Stack con sede en Grecia, especializado en aplicaciones web.",
     "copy": "© {{year}} Christos. Todos los derechos reservados.",
     "links": {
-      "privacy": "Política de privacidad",
-      "terms": "Términos de uso"
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Uso"
     }
   },
   "about": {
@@ -75,11 +93,11 @@
     "stats": {
       "experience": {
         "number": "8+",
-        "label": "Años de experiencia"
+        "label": "Años de Experiencia"
       },
       "projects": {
         "number": "20+",
-        "label": "Proyectos completados"
+        "label": "Proyectos Completados"
       },
       "companies": {
         "number": "5+",

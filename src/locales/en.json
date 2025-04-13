@@ -38,19 +38,37 @@
   "services": {
     "title": "My Services",
     "readMore": "Read More",
-    "showLess": "Show Less",
-    "items": [
-      {
-        "title": "Frontend Development",
-        "description": "Crafting fast, responsive, and accessible interfaces using modern libraries and frameworks.",
-        "moreInfo": "Having experience with React, Vue, Angular, and other frameworks, I convert designs into functional, responsive, and user-friendly web applications."
-      },
-      {
-        "title": "Backend Development",
-        "description": "Building robust backend systems using JavaScript frameworks like Node.js and Express.",
-        "moreInfo": "I focus on efficient backend solutions with REST APIs, MVC architecture, and integrations with SQL and NoSQL databases such as MongoDB and PostgreSQL."
-      }
-    ]
+    "readLess": "Show Less",
+    "frontend": {
+      "title": "Frontend Development",
+      "description": "Crafting fast, responsive, and accessible user interfaces using modern libraries and frameworks.",
+      "moreInfo": "With experience in React, Vue, and Angular, I turn designs and wireframes into functional, accessible web applications, ensuring a consistent user experience across devices."
+    },
+    "backend": {
+      "title": "Backend Development",
+      "description": "Building reliable backend systems using JavaScript frameworks like Node.js and Express.",
+      "moreInfo": "I focus on creating efficient and scalable backend systems with REST APIs, MVC architecture, and SQL/NoSQL databases such as MongoDB and PostgreSQL, ensuring seamless integration with frontend systems."
+    },
+    "api": {
+      "title": "API Design & Integration",
+      "description": "Designing secure REST APIs and connecting to services like CMSs and databases.",
+      "moreInfo": "I design and implement secure APIs and integrate them with systems like Contentful and Firebase, making data connections efficient. I also connect APIs to the frontend to ensure smooth communication."
+    },
+    "performance": {
+      "title": "Performance Optimization",
+      "description": "Boosting page performance using techniques like dynamic imports and caching.",
+      "moreInfo": "Using tools like Lighthouse, I focus on improving website loading times, SEO performance, and usability, implementing techniques like lazy loading, image compression, and code splitting."
+    },
+    "components": {
+      "title": "Component Libraries & Design Systems",
+      "description": "Building UI libraries with tools like Storybook for scalable and reusable components.",
+      "moreInfo": "I help clients create consistent design systems and reusable component libraries for efficient development, testing, and documentation of UI elements in isolation."
+    },
+    "testing": {
+      "title": "Testing & Deployment Automation",
+      "description": "Ensuring code quality with testing and automating deployments with CI/CD pipelines.",
+      "moreInfo": "Using tools like Jest and React Testing Library, I write robust unit and integration tests. I also automate build, test, and deployment pipelines with tools like GitHub Actions or Docker."
+    }
   },
   "footer": {
     "title": "Christos",

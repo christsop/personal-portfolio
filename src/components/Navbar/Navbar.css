@@ -58,7 +58,7 @@
 .hamburger .bar {
     width: 25px;
     height: 3px;
-    background-color: var(--icon-fill);
+    background-color: var(--navbar-link-color);
     transition: all 0.3s ease;
 }
 

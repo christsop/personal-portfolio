@@ -39,6 +39,7 @@
     background-color: var(--background-color-secondary);
     padding: 1.5rem;
     border-radius: 0.5rem;
+    border: 1px solid #0000001F;
 }
 
 .service-id {

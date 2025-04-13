@@ -3,33 +3,21 @@ import { useTranslation } from "react-i18next";
 import "./Service.css";
 
 const Service = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation(); // Access the i18n translation function
     const [expandedId, setExpandedId] = useState(null);
 
     const toggleReadMore = (id) => {
         setExpandedId((prevId) => (prevId === id ? null : id));
     };
 
+    // Service IDs will now correspond directly to i18n keys
     const services = [
-        {
-            id: 1,
-            title: "services.items.0.title",
-            description: "services.items.0.description",
-            moreInfo: "services.items.0.moreInfo",
-        },
-        {
-            id: 2,
-            title: "services.items.1.title",
-            description: "services.items.1.description",
-            moreInfo: "services.items.1.moreInfo",
-        },
-        {
-            id: 3,
-            title: "services.items.2.title",
-            description: "services.items.2.description",
-            moreInfo: "services.items.2.moreInfo",
-        },
-        // Add remaining services translations similarly
+        { id: 1, titleKey: "services.frontend.title", descKey: "services.frontend.description", moreInfoKey: "services.frontend.moreInfo" },
+        { id: 2, titleKey: "services.backend.title", descKey: "services.backend.description", moreInfoKey: "services.backend.moreInfo" },
+        { id: 3, titleKey: "services.api.title", descKey: "services.api.description", moreInfoKey: "services.api.moreInfo" },
+        { id: 4, titleKey: "services.performance.title", descKey: "services.performance.description", moreInfoKey: "services.performance.moreInfo" },
+        { id: 5, titleKey: "services.components.title", descKey: "services.components.description", moreInfoKey: "services.components.moreInfo" },
+        { id: 6, titleKey: "services.testing.title", descKey: "services.testing.description", moreInfoKey: "services.testing.moreInfo" },
     ];
 
     return (
@@ -39,16 +27,21 @@ const Service = () => {
                 <div className="services-grid">
                     {services.map((service) => (
                         <div key={service.id} className="service-card">
-                            <h3 className="service-title">{t(service.title)}</h3>
-                            <p className="service-description">{t(service.description)}</p>
+                            <h3 className="service-title">{t(service.titleKey)}</h3>
+                            <p className="service-description">{t(service.descKey)}</p>
+
                             {expandedId === service.id && (
-                                <p className="service-more-info">{t(service.moreInfo)}</p>
+                                <p className="service-more-info">{t(service.moreInfoKey)}</p>
                             )}
-                            <button className="service-link" onClick={() => toggleReadMore(service.id)}>
+
+                            <a
+                                className="service-link"
+                                onClick={() => toggleReadMore(service.id)}
+                            >
                                 {expandedId === service.id
-                                    ? t("services.showLess")
+                                    ? t("services.readLess")
                                     : t("services.readMore")}
-                            </button>
+                            </a>
                         </div>
                     ))}
                 </div>
