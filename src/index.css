@@ -102,6 +102,7 @@ button:focus-visible {
   /* --- Navbar --- */
   --navbar-link-color: var(--text-color-light); /* Navbar primary link color */
   --navbar-link-hover-color: #a0aec0; /* Navbar link hover color */
+  --navbar-language-link-hover-color: #a0aec0; /* Navbar link hover color */
 
   /* --- Hero Section --- */
   --hero-subtitle-color: #d1d5db; /* Subtitle light gray color */
@@ -173,6 +174,7 @@ button:focus-visible {
   /* --- Navbar --- */
   --navbar-link-color: #213547; /* Dark link color for navbar */
   --navbar-link-hover-color: #495464; /* Softer gray for hover */
+  --navbar-language-link-hover-color: #98a4b5;
 
   /* --- Hero Section --- */
   --hero-subtitle-color: #495464; /* Darker gray for hero subtitles */

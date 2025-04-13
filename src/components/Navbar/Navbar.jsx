@@ -2,9 +2,57 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import "./Navbar.css";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
+import { FaChevronDown } from "react-icons/fa";
+
+const LanguageDropdown = ({ currentLanguage, changeLanguage }) => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const languages = [
+        { code: "en", label: "English" },
+        { code: "fr", label: "Français" },
+        { code: "de", label: "Deutsch" },
+        { code: "es", label: "Español" },
+    ];
+
+    const currentLanguageLabel =
+        languages.find((lang) => lang.code === currentLanguage)?.label || "Language";
+
+    const handleDropdownToggle = () => {
+        setIsOpen((prevState) => !prevState);
+    };
+
+    const handleLanguageChange = (langCode) => {
+        changeLanguage(langCode);
+        setIsOpen(false); // Close dropdown after language selection
+    };
+
+    return (
+        <div className="custom-dropdown">
+            <a
+                className="custom-dropdown-btn"
+                onClick={handleDropdownToggle}
+                aria-expanded={isOpen}>
+                {currentLanguageLabel} <FaChevronDown className="dropdown-icon" />
+            </a>
+            <ul className={`dropdown-options ${isOpen ? "open" : ""}`}>
+                {languages.map((lang) => (
+                    <li
+                        key={lang.code}
+                        onClick={() => handleLanguageChange(lang.code)}
+                        className={`dropdown-item ${
+                            currentLanguage === lang.code ? "active" : ""
+                        }`}>
+                        {lang.label}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+};
 
 const Navbar = () => {
-    const { t, i18n } = useTranslation(); // Translation hook
+    const { t, i18n } = useTranslation();
+
     const [isDarkTheme, setIsDarkTheme] = useState(() => {
         const savedTheme = localStorage.getItem("theme");
         return (
@@ -25,11 +73,6 @@ const Navbar = () => {
             localStorage.setItem("theme", "light");
         }
     }, [isDarkTheme]);
-
-    // Change language function
-    const changeLanguage = (lang) => {
-        i18n.changeLanguage(lang);
-    };
 
     const Tabs = [
         { name: t("navbar.home"), link: "#home" },
@@ -52,8 +95,7 @@ const Navbar = () => {
                             key={tab.link}
                             href={tab.link}
                             className="navbar-link"
-                            onClick={() => setIsMenuOpen(false)}
-                        >
+                            onClick={() => setIsMenuOpen(false)}>
                             {tab.name}
                         </a>
                     ))}
@@ -69,24 +111,17 @@ const Navbar = () => {
                         size={24}
                     />
 
-                    {/* Language Dropdown */}
-                    <select
-                        className="language-dropdown"
-                        onChange={(e) => changeLanguage(e.target.value)}
-                        defaultValue={i18n.language}
-                    >
-                        <option value="en">English</option>
-                        <option value="fr">Français</option>
-                        <option value="de">Deutsch</option>
-                        <option value="es">Español</option>
-
-                    </select>
+                    {/* Modern Language Dropdown */}
+                    <LanguageDropdown
+                        currentLanguage={i18n.language}
+                        changeLanguage={i18n.changeLanguage}
+                    />
                 </div>
-                {/* Hamburger Menu */}
+
+                {/* Hamburger Menu (Mobile Only) */}
                 <div
                     className={`hamburger ${isMenuOpen ? "open" : ""}`}
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                >
+                    onClick={() => setIsMenuOpen((prevState) => !prevState)}>
                     <div className="bar"></div>
                     <div className="bar"></div>
                     <div className="bar"></div>
