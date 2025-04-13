@@ -161,3 +161,51 @@
 .navbar-links .react-toggle-dark-mode {
     margin-top: 10px;
 }
+
+/* Language Dropdown */
+.language-dropdown {
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--navbar-link-color);
+    border-radius: 6px;
+    background-color: transparent;
+    color: var(--text-color-light);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-dropdown:hover {
+    background-color: var(--background-color-secondary);
+    color: var(--navbar-link-hover-color);
+}
+
+.language-dropdown:focus {
+    outline: none;
+    border: 1px solid var(--navbar-link-hover-color);
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .navbar-right {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile-language-theme {
+        gap: 0.5rem;
+    }
+
+    .language-dropdown {
+        width: 100%;
+        max-width: 150px;
+        font-size: 12px;
+        text-align: center;
+    }
+}

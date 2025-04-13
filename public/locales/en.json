@@ -1,0 +1,13 @@
+{
+  "welcome": "Welcome to my app",
+  "description": "This is an internationalized React app.",
+  "navbar": {
+    "brand": "Christos",
+    "home": "Home",
+    "aboutMe": "About Me",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "connect": "Connect"
+  }
+}

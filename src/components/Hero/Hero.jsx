@@ -15,7 +15,7 @@ const Hero = () => {
             timeout = setTimeout(() => {
                 setDisplayedText(prev => prev + fullText[index]);
                 setIndex(prev => prev + 1);
-            }, 130);
+            }, 230);
         } else {
             // Reset typing effect after 3 seconds pause
             timeout = setTimeout(() => {

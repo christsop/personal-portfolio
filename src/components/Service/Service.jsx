@@ -3,42 +3,43 @@ import './Service.css';
 
 const services = [
     {
-        id: 1,
-        title: "Frontend Development",
-        description: "Crafting fast, mobile-first user interfaces using React, Next.js, and modern styling libraries like Tailwind CSS and SCSS.",
-        moreInfo: "I specialize in building intuitive, responsive UIs with an emphasis on accessibility and component reusability using frameworks like Next.js and tools like Tailwind, ensuring consistent user experiences across devices."
+        "id": 1,
+        "title": "Frontend Development",
+        "description": "Crafting fast, responsive, and accessible interfaces using the most modern and popular libraries and frameworks.",
+        "moreInfo": "Having a lot of experience with React, Vue, Angular, and many other web frameworks and libraries, I can convert ideas and design mockups into functional web applications following the best practices, ensuring consistent user experiences across platforms."
     },
     {
-        id: 2,
-        title: "Backend Development",
-        description: "Building robust backend systems with Node.js and Express, including authentication, database integration, and RESTful APIs.",
-        moreInfo: "I focus on secure, scalable server-side logic using MVC architecture. Implementing role-based access control, JWT-based auth, and REST APIs tied to both SQL and NoSQL data stores."
+        "id": 2,
+        "title": "Backend Development",
+        "description": "Building robust backend systems using JavaScript frameworks like Node and Express.",
+        "moreInfo": "I focus on crafting efficient solutions that not only work well but also make sense from both a technical and user perspective. Implementing REST APIs using MVC architecture and integrating them with both SQL and NoSQL databases. Also experienced in JWT-based auth and websocket communication."
     },
     {
-        id: 3,
-        title: "API Design & Integration",
-        description: "Designing secure REST APIs and integrating third-party services like Stripe, Firebase, or Contentful.",
-        moreInfo: "I develop well-documented and efficient RESTful APIs, and integrate external APIs with seamless frontend communication using Axios and proper error handling."
+        "id": 3,
+        "title": "API Design & Integration",
+        "description": "Designing secure REST APIs and integrating third-party services like databases and CMS.",
+        "moreInfo": "Integrating the APIs with headless CMSs like Contentful and databases like Elasticsearch or Firebase with a main focus on efficiency. Also connecting them with the frontend using Axios and websockets, ensuring security, speed, and proper error handling."
     },
     {
-        id: 4,
-        title: "Performance Optimization",
-        description: "Improving page speed, Core Web Vitals, and load times using Lighthouse audits, lazy loading, and bundling strategies.",
-        moreInfo: "Using dynamic imports, image optimization, code splitting and caching strategies to boost performance for production environments and SEO."
+        "id": 4,
+        "title": "Performance Optimization",
+        "description": "Using Lighthouse reports to improve page speed, SEO, and load times.",
+        "moreInfo": "Applying many techniques like dynamic imports, image optimization, file compression, code reusability and splitting, caching, and many more best practices following the trends to boost performance."
     },
     {
-        id: 5,
-        title: "Component Libraries & Design Systems",
-        description: "Developing scalable component systems using Storybook and atomic design.",
-        moreInfo: "I build flexible component libraries that follow design tokens and naming conventions, helping teams build apps faster with visual consistency and reusable code."
+        "id": 5,
+        "title": "Component Libraries & Design Systems",
+        "description": "Using Storybook or similar libraries for building UI components and pages in isolation.",
+        "moreInfo": "Over the years, I have come to understand the need of clients to have a component library with all the application’s components, like documentation. What such libraries also solve is the ability to rapidly develop and test UI components in isolation."
     },
     {
-        id: 6,
-        title: "Testing & Deployment Automation",
-        description: "Ensuring code quality with unit/integration tests and automating deployments using CI/CD pipelines.",
-        moreInfo: "Experience with GitHub Actions, Vercel CI, and Docker-based deployment. I write test suites using Jest and React Testing Library to ensure app stability before production."
+        "id": 6,
+        "title": "Testing & Deployment Automation",
+        "description": "Ensuring code quality with unit/integration tests and automating deployments using CI/CD pipelines.",
+        "moreInfo": "Experience with GitHub Actions, Vercel CI, and Docker-based deployment. I cover most of my code with tests using Jest and React Testing Library to ensure app stability."
     }
 ];
+
 
 const Service = () => {
     const [expandedId, setExpandedId] = useState(null);

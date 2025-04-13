@@ -1,0 +1,11 @@
+{
+  "navbar": {
+    "brand": "Christos",
+    "home": "Home",
+    "aboutMe": "About Me",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "connect": "Connect"
+  }
+}
