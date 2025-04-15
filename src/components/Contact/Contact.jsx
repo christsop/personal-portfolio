@@ -109,7 +109,7 @@ const Contact = () => {
                                     </label>
                                     <textarea
                                         name="message"
-                                        className="form-input"
+                                        className="form-input message"
                                         placeholder={t("contact.form.messagePlaceholder")}
                                         onInput={(e) => adjustHeight(e.target)}
                                         required
