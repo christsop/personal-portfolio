@@ -38,6 +38,15 @@ const Contact = () => {
                     console.log(error.text);
                 }
             );
+
+        // inform owner for new contact request
+        emailjs
+            .sendForm(
+                process.env.EMAILJS_SERVICE_ID,
+                process.env.EMAILJS_TEMPLATE_ID_INFORM_OWNER,
+                form.current,
+                process.env.EMAILJS_USER_ID
+            )
     };
 
     function adjustHeight(element) {
