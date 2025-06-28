@@ -31,7 +31,7 @@ const Footer = () => {
                             <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
                                 <FaFacebook />
                             </a>
-                            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+                            <a href="https://www.linkedin.com/in/christos-tsopelas-77218911b/" target="_blank" rel="noreferrer">
                                 <FaLinkedin />
                             </a>
                             <a href="https://github.com" target="_blank" rel="noreferrer">
