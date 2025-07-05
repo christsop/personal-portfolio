@@ -35,8 +35,6 @@ const Hero = () => {
     }, [index, fullText]);
 
     useEffect(() => {
-        fetch('https://my-portfolio-backend-six.vercel.app/test').then(res => res.json()).then((res) => {
-            console.log(res)})
         return;
         fetch("https://geolocation-db.com/json/")
             .then((res) => res.json())
@@ -112,7 +110,6 @@ const Hero = () => {
                     className="hero-button-secondary"
                     href="/resume.pdf"
                     download
-                    onClick={handleResumeClick}
                 >
                     {t("hero.resumeButton")} <HiDownload className="download-icon" />
                 </a>
