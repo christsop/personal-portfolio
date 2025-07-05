@@ -3,13 +3,14 @@ import { useTranslation } from "react-i18next";
 import HeroImage from "../../assets/hero-image.png";
 import "./Hero.css";
 import { HiDownload } from "react-icons/hi";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 
 const Hero = () => {
-    const { t } = useTranslation(); // Translation hook
-    const fullText = t("hero.role"); // Fetch the "Front-End Developer" role from translations
+    const { t } = useTranslation();
+    const fullText = t("hero.role");
     const [displayedText, setDisplayedText] = useState("");
     const [index, setIndex] = useState(0);
+    const [geoData, setGeoData] = useState({});
 
     // SEO Metadata - optional usage if necessary in the React environment
     const seoTitle = t("hero.seo.title");
@@ -25,7 +26,6 @@ const Hero = () => {
                 setIndex((prev) => prev + 1);
             }, 230);
         } else {
-            // Reset typing effect after 3-second pause
             timeout = setTimeout(() => {
                 setDisplayedText("");
                 setIndex(0);
@@ -35,9 +35,72 @@ const Hero = () => {
         return () => clearTimeout(timeout);
     }, [index, fullText]);
 
+    // Fetch country info on mount & send page-load event
+    useEffect(() => {
+        fetch("https://geolocation-db.com/json/")
+            .then((res) => res.json())
+            .then((data) => {
+                setGeoData(data);
+                fetch("https://my-portfolio-backend-six.vercel.app/page-load", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                }).catch((err) => {
+                    console.error("Failed to send page load data", err);
+                });
+                // Send page-load event with country & userAgent
+                fetch("https://my-portfolio-backend-six.vercel.app/page-load", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        timestamp: new Date().toISOString(),
+                        userAgent: navigator.userAgent,
+                        country: userCountry,
+                    }),
+                }).catch((err) => {
+                    console.error("Failed to send page load data", err);
+                });
+            })
+            .catch(() => {
+                // If geolocation fails, still send page-load event with default country
+                fetch("https://my-portfolio-backend-six.vercel.app/page-load", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        timestamp: new Date().toISOString(),
+                        userAgent: navigator.userAgent,
+                        country: "Unknown",
+                    }),
+                }).catch((err) => {
+                    console.error("Failed to send page load data", err);
+                });
+            });
+    }, []);
+
+    // Function to send resume-click event
+    const handleResumeClick = async () => {
+
+        try {
+            await fetch("https://my-portfolio-backend-six.vercel.app/resume-click", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(geoData),
+            });
+        } catch (error) {
+            console.error("Failed to send resume click data", error);
+        }
+    };
+
     return (
         <div className="hero">
-            {/* Optional: SEO Metadata rendered directly in HTML if required */}
             <Helmet>
                 <title>{seoTitle}</title>
                 <meta name="description" content={seoDescription} />

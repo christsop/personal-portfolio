@@ -28,8 +28,8 @@ const SEO = () => {
 };
 
 createRoot(document.getElementById("root")).render(
-    <StrictMode>
+    <>
         <SEO />
         <App />
-    </StrictMode>
+    </>
 );
