@@ -4,13 +4,27 @@ import HeroImage from "../../assets/hero-image.png";
 import "./Hero.css";
 import { HiDownload } from "react-icons/hi";
 import { Helmet } from "react-helmet";
+import { getGeoData, registerStatistics } from "../../utils/utils.js";
+
+// const baseUrl = 'http://localhost:4000';
+const baseUrl = 'https://my-portfolio-backend-six.vercel.app';
 
 const Hero = () => {
     const { t } = useTranslation();
     const fullText = t("hero.role");
     const [displayedText, setDisplayedText] = useState("");
     const [index, setIndex] = useState(0);
-    const [geoData, setGeoData] = useState({});
+    const [clientData, setClientData] = useState({
+        country_code: "GR",
+        country_name: "Greece",
+        city: "Athens",
+        postal: null,
+        latitude: 37.9833,
+        longitude: 23.7333,
+        IPv4: "91.140.88.193",
+        state: "Attica",
+        userAgent: encodeURIComponent(navigator.userAgent),
+    });
 
     const seoTitle = t("hero.seo.title");
     const seoDescription = t("hero.seo.description");
@@ -34,48 +48,20 @@ const Hero = () => {
         return () => clearTimeout(timeout);
     }, [index, fullText]);
 
+    const fetchGeoDataAndRegisterLoad = async () => {
+        const geoData = await getGeoData();
+        const userAgent = encodeURIComponent(navigator.userAgent);
+        const clientDataToStore = {...geoData, userAgent};
+        setClientData(clientDataToStore);
+        await registerStatistics(baseUrl, clientDataToStore, 'page-load');
+    }
+
     useEffect(() => {
-        return;
-        fetch("https://geolocation-db.com/json/")
-            .then((res) => res.json())
-            .then((data) => {
-                setGeoData(data);
-
-                const timestamp = encodeURIComponent(new Date().toISOString());
-                const userAgent = encodeURIComponent(navigator.userAgent);
-                const country = encodeURIComponent(data.country_name || "Unknown");
-
-                const queryString = `?timestamp=${timestamp}&userAgent=${userAgent}&country=${country}&ip=${encodeURIComponent(data.IPv4 || "")}`;
-
-                fetch(`https://my-portfolio-backend-six.vercel.app/page-load${queryString}`)
-                    .catch((err) => console.error("GET request failed", err));
-            })
-            .catch(() => {
-                const timestamp = encodeURIComponent(new Date().toISOString());
-                const userAgent = encodeURIComponent(navigator.userAgent);
-                const country = encodeURIComponent("Unknown");
-
-                const queryString = `?timestamp=${timestamp}&userAgent=${userAgent}&country=${country}`;
-
-                fetch(`https://my-portfolio-backend-six.vercel.app/page-load${queryString}`)
-                    .catch((err) => console.error("GET fallback failed", err));
-            });
+        fetchGeoDataAndRegisterLoad();
     }, []);
 
     const handleResumeClick = async () => {
-        const { country_name, IPv4, city, state } = geoData;
-        const query = new URLSearchParams({
-            country: country_name || "Unknown",
-            ip: IPv4 || "",
-            city: city || "",
-            state: state || "",
-        }).toString();
-
-        try {
-            await fetch(`https://my-portfolio-backend-six.vercel.app/resume-click?${query}`);
-        } catch (error) {
-            console.error("GET resume-click failed", error);
-        }
+        await registerStatistics(baseUrl, clientData, 'resume-download');
     };
 
     return (
@@ -110,6 +96,7 @@ const Hero = () => {
                     className="hero-button-secondary"
                     href="/resume.pdf"
                     download
+                    onClick={handleResumeClick}
                 >
                     {t("hero.resumeButton")} <HiDownload className="download-icon" />
                 </a>
