@@ -14,17 +14,7 @@ const Hero = () => {
     const fullText = t("hero.role");
     const [displayedText, setDisplayedText] = useState("");
     const [index, setIndex] = useState(0);
-    const [clientData, setClientData] = useState({
-        country_code: "GR",
-        country_name: "Greece",
-        city: "Athens",
-        postal: null,
-        latitude: 37.9833,
-        longitude: 23.7333,
-        IPv4: "91.140.88.193",
-        state: "Attica",
-        userAgent: encodeURIComponent(navigator.userAgent),
-    });
+    const [clientData, setClientData] = useState();
 
     const seoTitle = t("hero.seo.title");
     const seoDescription = t("hero.seo.description");
