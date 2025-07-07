@@ -1,8 +1,29 @@
 import CryptoJS from 'crypto-js';
+import emailjs from "emailjs-com";
+
+const informOwnerWithEmail = () => {
+    emailjs
+        .send(
+            process.env.EMAILJS_SERVICE_ID,
+            process.env.EMAILJS_TEMPLATE_ID_INFORM_OWNER,
+            {name: 'visited'},
+            process.env.EMAILJS_USER_ID
+        )
+        .then(
+        (result) => {
+            console.log(result.text);
+        },
+        (error) => {
+            console.log(error.text);
+        }
+    );
+}
 
 export const registerStatistics = async (baseUrl, data, type) => {
     const { country_name, city, latitude, longitude, userAgent } = data;
 
+    // notify user for accessing the website outside of greece
+    country_name !== 'Greece' && informOwnerWithEmail();
     const payload = {
         country_name,
         city,
