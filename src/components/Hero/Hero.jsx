@@ -63,10 +63,12 @@ const Hero = () => {
             </h1>
             <p className="hero-subtitle">{t("hero.subtitle")}</p>
             <div className="hero-buttons">
-                <a onClick={(e)=> {
-                    e.preventDefault();
-                    registerStatistics('contact-click');
-                }} href="#contact" className="hero-button">
+                <a
+                    href="#contact" className="hero-button"
+                    onClick={()=> {
+                        registerStatistics('contact-click');
+                    }}
+                >
                     {t("hero.contactButton")}
                 </a>
                 <a
