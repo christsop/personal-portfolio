@@ -34,10 +34,6 @@ const Hero = () => {
         return () => clearTimeout(timeout);
     }, [index, fullText]);
 
-
-
-
-
     const handleResumeClick = () => {
         registerStatistics('resume-download');
     };
@@ -68,8 +64,8 @@ const Hero = () => {
             <p className="hero-subtitle">{t("hero.subtitle")}</p>
             <div className="hero-buttons">
                 <a onClick={(e)=> {
-                    e.prevent.default;
-                    registerStatistics('contact-click')
+                    e.preventDefault();
+                    registerStatistics('contact-click');
                 }} href="#contact" className="hero-button">
                     {t("hero.contactButton")}
                 </a>

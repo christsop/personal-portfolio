@@ -1,27 +1,27 @@
 import CryptoJS from 'crypto-js';
-import emailjs from "emailjs-com";
+// import emailjs from "emailjs-com";
 
 export let geoData;
 export let userAgent;
 export let clientData;
 
-const informOwnerWithEmail = () => {
-    emailjs
-        .send(
-            process.env.EMAILJS_SERVICE_ID,
-            process.env.EMAILJS_TEMPLATE_ID_INFORM_OWNER,
-            {name: 'visited'},
-            process.env.EMAILJS_USER_ID
-        )
-        .then(
-        (result) => {
-            console.log(result.text);
-        },
-        (error) => {
-            console.log(error.text);
-        }
-    );
-}
+// const informOwnerWithEmail = () => {
+//     emailjs
+//         .send(
+//             process.env.EMAILJS_SERVICE_ID,
+//             process.env.EMAILJS_TEMPLATE_ID_INFORM_OWNER,
+//             {name: 'visited'},
+//             process.env.EMAILJS_USER_ID
+//         )
+//         .then(
+//         (result) => {
+//             console.log(result.text);
+//         },
+//         (error) => {
+//             console.log(error.text);
+//         }
+//     );
+// }
 
 export const registerStatistics = async (type) => {
     // const baseUrl = 'http://localhost:4000';
@@ -53,7 +53,6 @@ export const registerStatistics = async (type) => {
         console.error("registerStatistics failed", error);
     }
 };
-
 
 export const getGeoDataAndStoreGlobaly = async () => {
     try {

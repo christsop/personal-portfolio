@@ -22,7 +22,6 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        console.log(form.current.name.value)
         emailjs
             .sendForm(
                 process.env.EMAILJS_SERVICE_ID,
@@ -32,11 +31,10 @@ const Contact = () => {
             )
             .then(
                 (result) => {
-                    console.log(result.text);
                     handleFormSubmission();
                 },
                 (error) => {
-                    console.log(error.text);
+                    // Handle error silently
                 }
             );
 
@@ -48,6 +46,10 @@ const Contact = () => {
                 form.current,
                 process.env.EMAILJS_USER_ID
             )
+            .then(
+                () => {},
+                () => {}
+            );
     };
 
     function adjustHeight(element) {
