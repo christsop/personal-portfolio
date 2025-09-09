@@ -6,14 +6,11 @@ import { HiDownload } from "react-icons/hi";
 import { Helmet } from "react-helmet";
 import { registerStatistics } from "../../utils/utils.js";
 
-
-
 const Hero = () => {
     const { t } = useTranslation();
     const fullText = t("hero.role");
     const [displayedText, setDisplayedText] = useState("");
     const [index, setIndex] = useState(0);
-    const [clientData, setClientData] = useState();
 
     const seoTitle = t("hero.seo.title");
     const seoDescription = t("hero.seo.description");
@@ -70,7 +67,10 @@ const Hero = () => {
             </h1>
             <p className="hero-subtitle">{t("hero.subtitle")}</p>
             <div className="hero-buttons">
-                <a href="#contact" className="hero-button">
+                <a onClick={(e)=> {
+                    e.prevent.default;
+                    registerStatistics('contact-click')
+                }} href="#contact" className="hero-button">
                     {t("hero.contactButton")}
                 </a>
                 <a

@@ -123,7 +123,10 @@ const Navbar = () => {
                                 key={tab.link}
                                 href={tab.link}
                                 className="navbar-link"
-                                onClick={() => setIsMenuOpen(false)}>
+                                onClick={() => {
+                                    setIsMenuOpen(false);
+                                    registerStatistics(`navbar-click-${tab.name}`);
+                                }}>
                                 {tab.name}
                             </a>
                         ))}
