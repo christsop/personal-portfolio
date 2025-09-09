@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./Service.css";
 import {Helmet} from "react-helmet";
+import {registerStatistics} from "../../utils/utils.js";
 
 const Service = () => {
     const { t } = useTranslation(); // Access the i18n translation function
     const [expandedId, setExpandedId] = useState(null);
 
     const toggleReadMore = (id) => {
+        registerStatistics(`read-more-${id}`);
         setExpandedId((prevId) => (prevId === id ? null : id));
     };
 

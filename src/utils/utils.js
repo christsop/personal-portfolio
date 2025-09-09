@@ -1,6 +1,10 @@
 import CryptoJS from 'crypto-js';
 import emailjs from "emailjs-com";
 
+export let geoData;
+export let userAgent;
+export let clientData;
+
 const informOwnerWithEmail = () => {
     emailjs
         .send(
@@ -19,11 +23,13 @@ const informOwnerWithEmail = () => {
     );
 }
 
-export const registerStatistics = async (baseUrl, data, type) => {
-    const { country_name, city, latitude, longitude, userAgent } = data;
+export const registerStatistics = async (type) => {
+    // const baseUrl = 'http://localhost:4000';
+    const baseUrl = 'https://my-portfolio-backend-six.vercel.app';
+    const { country_name, city, latitude, longitude, userAgent } = clientData;
 
-    // notify user for accessing the website outside of greece
-    country_name !== 'Greece' && informOwnerWithEmail();
+    // notify user for accessing the website
+    // informOwnerWithEmail();
     const payload = {
         country_name,
         city,
@@ -49,13 +55,13 @@ export const registerStatistics = async (baseUrl, data, type) => {
 };
 
 
-export const getGeoData = async () => {
+export const getGeoDataAndStoreGlobaly = async () => {
     try {
         const res = await fetch("https://geolocation-db.com/json/");
-        const data = await res.json();
-        return data;
+        geoData = await res.json();
+        userAgent = encodeURIComponent(navigator.userAgent);
+        clientData = {...geoData, userAgent}
     } catch (error) {
         console.error("Failed to fetch geo data:", error);
-        return null;
     }
 };

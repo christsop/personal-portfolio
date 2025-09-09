@@ -4,10 +4,9 @@ import HeroImage from "../../assets/hero-image.png";
 import "./Hero.css";
 import { HiDownload } from "react-icons/hi";
 import { Helmet } from "react-helmet";
-import { getGeoData, registerStatistics } from "../../utils/utils.js";
+import { registerStatistics } from "../../utils/utils.js";
 
-// const baseUrl = 'http://localhost:4000';
-const baseUrl = 'https://my-portfolio-backend-six.vercel.app';
+
 
 const Hero = () => {
     const { t } = useTranslation();
@@ -38,20 +37,12 @@ const Hero = () => {
         return () => clearTimeout(timeout);
     }, [index, fullText]);
 
-    const fetchGeoDataAndRegisterLoad = async () => {
-        const geoData = await getGeoData();
-        const userAgent = encodeURIComponent(navigator.userAgent);
-        const clientDataToStore = {...geoData, userAgent};
-        setClientData(clientDataToStore);
-        await registerStatistics(baseUrl, clientDataToStore, 'page-load');
-    }
 
-    useEffect(() => {
-        fetchGeoDataAndRegisterLoad();
-    }, []);
 
-    const handleResumeClick = async () => {
-        await registerStatistics(baseUrl, clientData, 'resume-download');
+
+
+    const handleResumeClick = () => {
+        registerStatistics('resume-download');
     };
 
     return (

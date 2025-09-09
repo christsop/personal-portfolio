@@ -5,6 +5,7 @@ import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { FaChevronDown } from "react-icons/fa";
 import { useOutsideClick } from "../../hooks.jsx";
 import {Helmet} from "react-helmet";
+import {registerStatistics} from "../../utils/utils.js";
 
 const LanguageDropdown = ({ currentLanguage, changeLanguage }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -20,11 +21,14 @@ const LanguageDropdown = ({ currentLanguage, changeLanguage }) => {
         languages.find((lang) => lang.code === currentLanguage)?.label || "Language";
 
     const handleDropdownToggle = () => {
+        registerStatistics('language-dropdown-click');
+
         setIsOpen((prevState) => !prevState);
     };
 
     const handleLanguageChange = (langCode) => {
         changeLanguage(langCode);
+        registerStatistics(`language-change-${langCode}`);
         setIsOpen(false); // Close dropdown after language selection
     };
 
@@ -131,7 +135,10 @@ const Navbar = () => {
                         <DarkModeSwitch
                             className="theme-switcher"
                             checked={isDarkTheme}
-                            onChange={() => setIsDarkTheme(!isDarkTheme)}
+                            onChange={() => {
+                                setIsDarkTheme(!isDarkTheme);
+                                registerStatistics('theme-change');
+                            }}
                             size={24}
                         />
 
@@ -146,7 +153,10 @@ const Navbar = () => {
                     <div
                         ref={ref}
                         className={`hamburger ${isMenuOpen ? "open" : ""}`}
-                        onClick={() => setIsMenuOpen((prevState) => !prevState)}>
+                        onClick={() => {
+                            setIsMenuOpen((prevState) => !prevState);
+                            registerStatistics('hamburger-click');
+                        }}>
                         <div className="bar"></div>
                         <div className="bar"></div>
                         <div className="bar"></div>
