@@ -1,87 +1,238 @@
+/* ===== SERVICES — Bento layout, scroll reveal, elevated cards ===== */
+
+/* ---- Scroll reveal base state ---- */
+.service-card {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow var(--transition-interactive),
+    border-color var(--transition-interactive);
+}
+
+.service-card.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays driven by CSS for revealed cards */
+.service-card:nth-child(1) { transition-delay: 0ms; }
+.service-card:nth-child(2) { transition-delay: 80ms; }
+.service-card:nth-child(3) { transition-delay: 160ms; }
+.service-card:nth-child(4) { transition-delay: 80ms; }
+.service-card:nth-child(5) { transition-delay: 160ms; }
+.service-card:nth-child(6) { transition-delay: 240ms; }
+
+/* ---- Section ---- */
 .services-section {
-    background-color: var(--background-color);
-    color: var(--text-color-light);
-    padding: 5rem 0;
+  background-color: var(--background-color);
+  color: var(--text-color-light);
+  padding: clamp(var(--space-16), 8vw, var(--space-24)) 0;
+  position: relative;
+}
+
+/* Subtle section separator */
+.services-section::before {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: var(--accent);
+  margin: 0 auto var(--space-12);
+  border-radius: var(--radius-full);
+  opacity: 0.6;
 }
 
 .services-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+  max-width: var(--content-wide);
+  margin: 0 auto;
+  padding: 0 var(--space-8);
 }
 
+/* ---- Section heading ---- */
 .services-heading {
-    font-size: 2.25rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 3rem;
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  text-align: left;
+  margin-bottom: var(--space-4);
+  color: var(--text-color-light);
 }
 
+.services-subheading {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--text-color-muted);
+  text-align: left;
+  margin-bottom: var(--space-12);
+  max-width: 480px;
+}
+
+/* ---- Bento grid ---- */
 .services-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
 }
 
-@media (min-width: 768px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+@media (min-width: 640px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 1024px) {
-    .services-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* First card spans 2 cols — the bento hero card */
+  .service-card:first-child {
+    grid-column: span 2;
+  }
 }
 
+/* ---- Card ---- */
 .service-card {
-    background-color: var(--background-color-secondary);
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    border: 1px solid #0000001F;
+  background-color: var(--surface-card);
+  padding: var(--space-8);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  position: relative;
+  overflow: hidden;
 }
 
+/* Subtle top-edge accent line on hover */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: var(--space-8);
+  right: var(--space-8);
+  height: 1.5px;
+  background: var(--accent);
+  border-radius: var(--radius-full);
+  opacity: 0;
+  transform: scaleX(0.3);
+  transition:
+    opacity var(--transition-interactive),
+    transform var(--transition-interactive);
+  transform-origin: left;
+}
+
+.service-card:hover::before {
+  opacity: 0.7;
+  transform: scaleX(1);
+}
+
+.service-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(45,212,200,0.18);
+  transform: translateY(-3px);
+}
+
+body.light-theme .service-card:hover {
+  border-color: rgba(10,158,150,0.2);
+}
+
+/* ---- Card number (replaces gradient service-id) ---- */
 .service-id {
-    text-align: right;
-    font-size: 1.5rem;
-    font-weight: bold;
-    background: var(--gradient-service-id);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.7;
 }
 
+/* ---- Card title ---- */
 .service-title {
-    font-size: 20px;
-    font-weight: 700;
-    margin-top: 0.5rem;
-    color: var(--text-color-light);
-    text-align: center;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-color-light);
+  text-align: left;
+  margin: 0;
+  line-height: 1.2;
 }
 
+/* Wider title for hero card */
+.service-card:first-child .service-title {
+  font-size: var(--text-xl);
+}
+
+/* ---- Card description ---- */
 .service-description {
-    margin-top: 0.5rem;
-    color: var(--service-description-color);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  color: var(--service-description-color);
+  margin: 0;
+  max-width: none;
 }
 
-.service-link {
-    margin-top: 1rem;
-    display: inline-block;
-    background-color: var(--background-color-secondary);
-    color: var(--service-link-color);
-    font-size: 1rem;
-    border-radius: 0.375rem;
-    padding: 0.4rem 0.8rem;
-    cursor: pointer;
-}
-
+/* ---- Expanded info ---- */
 .service-more-info {
-    margin-top: 0.75rem;
-    background: transparent;
-    color: var(--text-color-muted);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    transition: all 0.3s ease;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  color: var(--text-color-muted);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-divider);
+  animation: expandIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes expandIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Read more link ---- */
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-top: auto;
+  padding-top: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--service-link-color);
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  background: none;
+  transition: gap var(--transition-fast), color var(--transition-fast);
+}
+
+.service-link::after {
+  content: '→';
+  display: inline-block;
+  transition: transform var(--transition-fast);
+}
+
+.service-link:hover::after {
+  transform: translateX(4px);
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 640px) {
+  .services-container {
+    padding: 0 var(--space-5);
+  }
+
+  .service-card {
+    padding: var(--space-6);
+  }
+
+  .services-heading {
+    font-size: var(--text-xl);
+  }
 }

@@ -50,35 +50,43 @@ const Hero = () => {
                 <meta property="og:url" content={t("hero.seo.ogUrl")} />
             </Helmet>
 
-            <img src={HeroImage} alt={t("hero.altText")} className="hero-image" />
-            <h1 className="hero-title">
-                <div>
-                    {t("hero.introduction")}{" "}
-                    <span className="hero-highlight">{t("hero.name")}, </span>
+            <div className="hero-inner">
+                {/* Left: text content */}
+                <div className="hero-text">
+                    {/*<span className="hero-eyebrow">Available for work</span>*/}
+                    <h1 className="hero-title">
+                        {t("hero.introduction")}{" "}
+                        <span className="hero-highlight">{t("hero.name")}</span>,
+                        <span className={`${displayedText ? "" : "height-49"} typewriter-text`}>
+                            {displayedText}
+                            <span className="cursor">|</span>
+                        </span>
+                    </h1>
+                    <p className="hero-subtitle">{t("hero.subtitle")}</p>
+                    <div className="hero-buttons">
+                        <a
+                            href="#contact" className="hero-button"
+                            onClick={()=> {
+                                registerStatistics('contact-click');
+                            }}
+                        >
+                            {t("hero.contactButton")}
+                        </a>
+                        <a
+                            className="hero-button-secondary"
+                            href="/resume.pdf"
+                            download
+                            onClick={handleResumeClick}
+                        >
+                            {t("hero.resumeButton")} <HiDownload className="download-icon" />
+                        </a>
+                    </div>
                 </div>
-                <span className={`${displayedText ? "" : "height-49"} typewriter-text`}>
-                    {displayedText}
-                    <span className="cursor">|</span>
-                </span>
-            </h1>
-            <p className="hero-subtitle">{t("hero.subtitle")}</p>
-            <div className="hero-buttons">
-                <a
-                    href="#contact" className="hero-button"
-                    onClick={()=> {
-                        registerStatistics('contact-click');
-                    }}
-                >
-                    {t("hero.contactButton")}
-                </a>
-                <a
-                    className="hero-button-secondary"
-                    href="/resume.pdf"
-                    download
-                    onClick={handleResumeClick}
-                >
-                    {t("hero.resumeButton")} <HiDownload className="download-icon" />
-                </a>
+
+                {/* Right: avatar */}
+                <div className="hero-image-wrapper">
+                    <img src={HeroImage} alt={t("hero.altText")} className="hero-image" />
+                </div>
             </div>
         </div>
     );

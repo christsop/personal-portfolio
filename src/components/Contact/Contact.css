@@ -1,31 +1,35 @@
 .contact-section {
     background-color: var(--background-color);
     color: var(--text-color-light);
-    padding: 5rem 0;
+    padding: clamp(var(--space-16), 8vw, var(--space-24)) 0;
 }
 
 .contact-container {
-    max-width: 1200px;
+    max-width: var(--content-wide);
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 var(--space-8);
 }
 
 .contact-heading {
-    font-size: 2.25rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 3rem;
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    text-align: left;
+    margin-bottom: var(--space-12);
+    color: var(--text-color-light);
 }
 
 .contact-flex {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: var(--space-12);
 }
 
 @media (min-width: 768px) {
     .contact-flex {
         flex-direction: row;
+        gap: var(--space-16);
     }
 }
 
@@ -33,33 +37,49 @@
     flex: 1;
 }
 
+/* Fixed: removed gradient-clip trick — now plain color, always visible */
 .contact-subheading {
-    font-size: 1.875rem;
-    font-weight: bold;
-    background: var(--contact-subheading-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 1rem;
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--accent);
+    margin-bottom: var(--space-4);
+    /* No gradient-clip — prevents invisible text if gradient var is unset */
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    background-clip: unset;
 }
 
 .contact-detail {
-    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin: var(--space-4) 0;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--text-color-muted);
 }
 
 .contact-icon {
-    color: var(--primary-button-bg);
-    margin-right: 0.5rem;
+    color: var(--accent);
+    flex-shrink: 0;
+    font-size: 1rem;
 }
 
 .contact-link {
     color: var(--contact-link-color);
     text-decoration: none;
+    transition: color var(--transition-fast);
 }
 
 .contact-link:hover {
+    color: var(--accent-dim);
     text-decoration: underline;
 }
 
+/* Form wrapper */
 .contact-form-wrapper {
     flex: 1;
     width: 100%;
@@ -68,47 +88,100 @@
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--space-5);
 }
 
 .form-label {
     display: block;
-    margin-bottom: 0.5rem;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--text-color-muted);
+    margin-bottom: var(--space-2);
 }
 
 .form-input {
-    width: calc(100% - 1rem);
-    padding: 0.5rem;
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
     background-color: var(--form-input-bg-color);
     border: 1px solid var(--form-input-border-color);
-    border-radius: 0.5rem;
+    border-radius: var(--radius-md);
     color: var(--text-color-light);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    box-sizing: border-box;
+}
+
+.form-input::placeholder {
+    color: var(--text-color-faint);
 }
 
 .form-input:focus {
     outline: none;
-    border-color: var(--primary-button-bg);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-subtle);
 }
 
+/* Send button — explicit all properties, no reliance on base button reset */
 .send-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin-left: auto;
-    width: 100px;
+    padding: var(--space-3) var(--space-8);
     background: var(--primary-button-bg);
     color: var(--primary-button-color);
-    padding: 0.5rem 2rem;
-    border-radius: var(--primary-button-radius);
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    transition: all var(--transition-interactive);
+    min-width: 100px;
+}
+
+.send-button:hover {
+    background: var(--primary-button-bgHover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--accent-glow);
+}
+
+.send-button:active {
+    transform: translateY(0);
+    box-shadow: none;
 }
 
 .contact-form-actions {
     display: flex;
 }
 
+/* Success message */
+.form-success-message {
+    margin-top: var(--space-4);
+    color: var(--accent);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 500;
+}
+
+/* Legacy class name kept for backward compat */
 .thank-you {
-    color: var(--primary-button-bg);
+    color: var(--accent);
 }
 
 .message {
     resize: none;
-    min-height: 100px;
+    min-height: 120px;
+}
+
+@media (max-width: 640px) {
+    .contact-container {
+        padding: 0 var(--space-5);
+    }
+    .contact-heading {
+        font-size: var(--text-xl);
+    }
 }

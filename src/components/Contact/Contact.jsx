@@ -6,7 +6,7 @@ import "./Contact.css";
 import {Helmet} from "react-helmet";
 
 const EMAIL = "tsopelasat@gmail.com";
-const PHONE = "306934831454";
+const PHONE = "41779036812";
 
 const Contact = () => {
     const { t } = useTranslation(); // Translation Hook
