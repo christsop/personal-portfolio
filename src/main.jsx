@@ -1,8 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./index.css";
 import App from "./App.jsx";
+import JsonBeautifier from "./pages/JsonBeautifier/JsonBeautifier.jsx";
 import "./i18n";
 import {Helmet} from "react-helmet";
 
@@ -28,8 +30,13 @@ const SEO = () => {
 };
 
 createRoot(document.getElementById("root")).render(
-    <>
-        <SEO />
-        <App />
-    </>
+    <StrictMode>
+        <BrowserRouter>
+            <SEO />
+            <Routes>
+                <Route path="/" element={<App />} />
+                <Route path="/tools/json-beautifier" element={<JsonBeautifier />} />
+            </Routes>
+        </BrowserRouter>
+    </StrictMode>
 );

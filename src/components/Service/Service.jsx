@@ -21,6 +21,7 @@ const Service = () => {
         { id: 4, titleKey: "services.performance.title", descKey: "services.performance.description", moreInfoKey: "services.performance.moreInfo" },
         { id: 5, titleKey: "services.components.title", descKey: "services.components.description", moreInfoKey: "services.components.moreInfo" },
         { id: 6, titleKey: "services.testing.title", descKey: "services.testing.description", moreInfoKey: "services.testing.moreInfo" },
+        { id: 7, titleKey: "services.jsonBeautifier.title", descKey: "services.jsonBeautifier.description", moreInfoKey: "services.jsonBeautifier.moreInfo", href: "/tools/json-beautifier", ctaKey: "services.jsonBeautifier.cta" },
     ];
 
     return (
@@ -46,14 +47,24 @@ const Service = () => {
                                     <p className="service-more-info">{t(service.moreInfoKey)}</p>
                                 )}
 
-                                <a
-                                    className="service-link"
-                                    onClick={() => toggleReadMore(service.id)}
-                                >
-                                    {expandedId === service.id
-                                        ? t("services.readLess")
-                                        : t("services.readMore")}
-                                </a>
+                                {service.href ? (
+                                    <a
+                                        className="service-link service-link-primary"
+                                        href={service.href}
+                                        onClick={() => registerStatistics(`service-open-${service.id}`)}
+                                    >
+                                        {t(service.ctaKey)}
+                                    </a>
+                                ) : (
+                                    <a
+                                        className="service-link"
+                                        onClick={() => toggleReadMore(service.id)}
+                                    >
+                                        {expandedId === service.id
+                                            ? t("services.readLess")
+                                            : t("services.readMore")}
+                                    </a>
+                                )}
                             </div>
                         ))}
                     </div>

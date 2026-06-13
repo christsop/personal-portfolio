@@ -100,6 +100,12 @@
       "title": "Testing & Deployment Automation",
       "description": "Ensuring code quality with testing and automating deployments with CI/CD pipelines.",
       "moreInfo": "Using tools like Jest and React Testing Library, I write robust unit and integration tests. I also automate build, test, and deployment pipelines with tools like GitHub Actions or Docker."
+    },
+    "jsonBeautifier": {
+      "title": "JSON Beautifier & Formatter",
+      "description": "A practical developer tool that formats messy JSON into readable, validated output.",
+      "moreInfo": "Built to demonstrate clean UI, parsing logic, validation feedback, and utility-focused product thinking inside the portfolio.",
+      "cta": "Open tool"
     }
   },
   "footer": {
@@ -175,5 +181,32 @@
     "ogDescription": "Check out my portfolio to view projects, services, and contact information.",
     "ogImage": "https://example.com/og-image.jpg",
     "ogUrl": "https://example.com"
+  },
+  "jsonBeautifier": {
+    "seo": {
+      "title": "JSON Beautifier | Chris Tsopelas",
+      "description": "Format, validate, and minify JSON with a clean developer-focused interface.",
+      "keywords": "json beautifier, json formatter, json validator, developer tools, chris tsopelas",
+      "author": "Chris Tsopelas"
+    },
+    "badge": "Developer Tool",
+    "backHome": "← Back to portfolio",
+    "title": "JSON Beautifier & Formatter",
+    "description": "Format, validate, minify, and copy JSON inside a clean utility page that showcases practical product craftsmanship.",
+    "inputLabel": "Input JSON",
+    "outputLabel": "Formatted output",
+    "inputPlaceholder": "Paste raw JSON here...",
+    "outputPlaceholder": "Formatted JSON will appear here...",
+    "errorPrefix": "Invalid JSON",
+    "actions": {
+      "format": "Beautify JSON",
+      "minify": "Minify JSON",
+      "copy": "Copy output",
+      "clear": "Clear"
+    },
+    "stats": {
+      "characters": "Characters",
+      "lines": "Lines"
+    }
   }
 }

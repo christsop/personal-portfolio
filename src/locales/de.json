@@ -68,6 +68,12 @@
       "title": "Testen & Deployment-Automatisierung",
       "description": "Sicherstellen der Codequalität durch Tests und Automatisierung von Deployments mit CI/CD-Pipelines.",
       "moreInfo": "Mit Tools wie Jest und React Testing Library schreibe ich umfassende Unit- und Integrationstests. Ich automatisiere auch Build-, Test- und Deployment-Pipelines mit Tools wie GitHub Actions oder Docker."
+    },
+    "jsonBeautifier": {
+      "title": "JSON Beautifier & Formatter",
+      "description": "Ein praktisches Entwickler-Tool, das unübersichtliches JSON in lesbare und validierte Ausgabe umwandelt.",
+      "moreInfo": "Erstellt, um saubere UI, Parsing-Logik, Validierungsfeedback und produktorientiertes Denken im Portfolio zu zeigen.",
+      "cta": "Tool öffnen"
     }
   },
   "footer": {
@@ -121,5 +127,32 @@
         "technologies": "MERN Stack"
       }
     ]
+  },
+  "jsonBeautifier": {
+    "seo": {
+      "title": "JSON Beautifier | Chris Tsopelas",
+      "description": "JSON mit einer sauberen, entwicklerorientierten Oberfläche formatieren, validieren und minimieren.",
+      "keywords": "json beautifier, json formatter, json validator, developer tools, chris tsopelas",
+      "author": "Chris Tsopelas"
+    },
+    "badge": "Developer Tool",
+    "backHome": "← Zurück zum Portfolio",
+    "title": "JSON Beautifier & Formatter",
+    "description": "JSON formatieren, validieren, minimieren und kopieren – in einer sauberen Utility-Seite, die praktische Produktqualität zeigt.",
+    "inputLabel": "JSON-Eingabe",
+    "outputLabel": "Formatierte Ausgabe",
+    "inputPlaceholder": "Rohes JSON hier einfügen...",
+    "outputPlaceholder": "Formatiertes JSON erscheint hier...",
+    "errorPrefix": "Ungültiges JSON",
+    "actions": {
+      "format": "JSON formatieren",
+      "minify": "JSON minimieren",
+      "copy": "Ausgabe kopieren",
+      "clear": "Leeren"
+    },
+    "stats": {
+      "characters": "Zeichen",
+      "lines": "Zeilen"
+    }
   }
 }

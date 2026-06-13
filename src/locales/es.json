@@ -68,6 +68,12 @@
       "title": "Pruebas y Automatización de Implementaciones",
       "description": "Asegurar la calidad del código mediante pruebas y automatizar las implementaciones con pipelines CI/CD.",
       "moreInfo": "Con herramientas como Jest y React Testing Library, escribo pruebas unitarias e integrales robustas. También automatizo los pipelines de compilación, prueba e implementación con herramientas como GitHub Actions o Docker."
+    },
+    "jsonBeautifier": {
+      "title": "JSON Beautifier & Formatter",
+      "description": "Una herramienta práctica para desarrolladores que convierte JSON desordenado en una salida legible y validada.",
+      "moreInfo": "Creada para mostrar una UI limpia, lógica de parsing, feedback de validación y criterio de producto dentro del portfolio.",
+      "cta": "Abrir herramienta"
     }
   },
   "footer": {
@@ -121,5 +127,32 @@
         "technologies": "MERN Stack"
       }
     ]
+  },
+  "jsonBeautifier": {
+    "seo": {
+      "title": "JSON Beautifier | Chris Tsopelas",
+      "description": "Formatea, valida y minifica JSON con una interfaz limpia orientada a desarrolladores.",
+      "keywords": "json beautifier, json formatter, json validator, developer tools, chris tsopelas",
+      "author": "Chris Tsopelas"
+    },
+    "badge": "Developer Tool",
+    "backHome": "← Volver al portfolio",
+    "title": "JSON Beautifier & Formatter",
+    "description": "Formatea, valida, minifica y copia JSON en una página utilitaria limpia que demuestra criterio real de producto.",
+    "inputLabel": "JSON de entrada",
+    "outputLabel": "Salida formateada",
+    "inputPlaceholder": "Pega aquí el JSON sin formato...",
+    "outputPlaceholder": "El JSON formateado aparecerá aquí...",
+    "errorPrefix": "JSON inválido",
+    "actions": {
+      "format": "Formatear JSON",
+      "minify": "Minificar JSON",
+      "copy": "Copiar salida",
+      "clear": "Limpiar"
+    },
+    "stats": {
+      "characters": "Caracteres",
+      "lines": "Líneas"
+    }
   }
 }
